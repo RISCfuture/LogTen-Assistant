@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Change the app’s settings</title>
+  <meta name="AppleTitle" content="Change the app’s settings">
+  <meta name="description" content="The app-wide Settings window: accounts, data cache, track detection and advanced options.">
+  <meta name="keywords" content="settings, preferences, accounts, data, track detection, advanced, writer mode, disposable logbook, finding ids">
+  <meta name="robots" content="index, anchor">
+  <link rel="stylesheet" href="logten-assistant-help.css">
+</head>
+<body>
+<a name="app-settings" id="app-settings"></a>
+<figure class="topicIcon"><img src="../help-icon.png" alt="" width="30" height="30"></figure>
+<h1>Change the app’s settings</h1>
+
+<p>Settings that apply to the whole app are in <strong>LogTen Assistant</strong> &#9656;
+<strong>Settings</strong> (<kbd>&#8984;,</kbd>). Settings for one logbook are in its own sheet instead;
+see <a href="logbook-settings.html">Change the settings for one logbook</a>.</p>
+
+<h2>Accounts</h2>
+
+<p>Credentials for <strong>FlySto</strong> (an API token) and the <strong>OpenSky Network</strong>
+(an API client). Each shows <strong>Connected</strong>, <strong>Saved in Keychain</strong> or
+<strong>Not set up</strong>. Click <strong>Set Up…</strong> or <strong>Change…</strong>, then
+<strong>Test</strong> and <strong>Save</strong>. See <a href="flysto.html">Sync flights from
+FlySto</a>.</p>
+
+<h2>Data</h2>
+
+<ul>
+  <li><strong>ADS-B Downloads</strong> — where traces are kept (<strong>Show in Finder</strong>) and
+    how much to keep (<strong>Keep up to</strong>).</li>
+  <li><strong>Airport Data</strong> — <strong>Update NASR data automatically</strong>.</li>
+</ul>
+
+<h2>Track Detection</h2>
+
+<p>How the app reads a recorded track to find takeoffs, landings and stops: the <strong>Speeds</strong>
+that count as airborne and as on the ground, and the <strong>Timing</strong> a change must hold for.
+<strong>Restore Defaults</strong> puts them back. An aircraft can override them in Logbook
+Settings.</p>
+
+<h2>Updates</h2>
+
+<p>How often the app checks GitHub for a new release, whether to include prereleases, and
+<strong>Check Now</strong>. See <a href="updates.html">Check for updates</a>.</p>
+
+<h2>Advanced</h2>
+
+<ul>
+  <li><strong>When applying fixes</strong> — <strong>Record the import packages</strong> (the
+    default) or <strong>Send them to LogTen</strong>. Sending needs a disposable test logbook open in
+    LogTen. See <a href="applying-fixes.html">Apply fixes to your logbook</a>.</li>
+  <li><strong>Show finding IDs</strong> — adds each finding’s identifier to the inspector, for
+    reporting a problem.</li>
+</ul>
+
+<p>The option to send is unavailable until the hidden <code>DisposableLogbookOpen</code> default is
+set. This is deliberate: declaring it says that LogTen has a disposable logbook open, and from
+Terminal it is
+<code>defaults write codes.tim.LogTenAssistant DisposableLogbookOpen -bool YES</code>.</p>
+
+<div class="seealso">
+  <h2>See also</h2>
+  <ul>
+    <li><a href="logbook-settings.html">Change the settings for one logbook</a></li>
+    <li><a href="applying-fixes.html">Apply fixes to your logbook</a></li>
+  </ul>
+</div>
+
+</body>
+</html>

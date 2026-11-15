@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Where the evidence comes from</title>
+  <meta name="AppleTitle" content="Where the evidence comes from">
+  <meta name="description" content="The Data Sources page: FlySto, ADS-B, and FAA airport data, and how well they cover your aircraft.">
+  <meta name="keywords" content="data sources, evidence, coverage, flysto, adsb, opensky, nasr, cifp, sync, fetch">
+  <meta name="robots" content="index, anchor">
+  <link rel="stylesheet" href="logten-assistant-help.css">
+</head>
+<body>
+<a name="data-sources" id="data-sources"></a>
+<figure class="topicIcon"><img src="../help-icon.png" alt="" width="30" height="30"></figure>
+<h1>Where the evidence comes from</h1>
+
+<p>Comparisons against the aircraft need evidence of what the aircraft actually did. The <strong>Data
+Sources</strong> page, the first in Audit &amp; Fix, shows where that evidence comes from and how much of
+your flying it covers.</p>
+
+<h2>The three kinds of data</h2>
+
+<ul>
+  <li><strong>FlySto</strong> parses the data logs your avionics recorded. See
+    <a href="flysto.html">Sync flights from FlySto</a>.</li>
+  <li><strong>ADS-B</strong> traces come from the public adsb.lol archive. See
+    <a href="adsb-data.html">Fetch ADS-B traces</a>.</li>
+  <li><strong>Airport Data</strong> is FAA reference data used to check airports, approaches and
+    night. See <a href="faa-data.html">Update FAA airport and approach data</a>.</li>
+</ul>
+
+<h2>Coverage</h2>
+
+<p>The <strong>Coverage</strong> table shows, for each aircraft you’ve flown, how much of its flying
+the evidence covers. A flight with no evidence can’t be compared, so it produces no
+Aircraft Comparisons findings; that’s a gap in coverage, not a clean bill of health.</p>
+
+<h2>Running tasks</h2>
+
+<p>A task in progress appears at the top of the page, with a <strong>Stop</strong> button. <strong>Audit</strong>
+&#9656; <strong>Stop</strong> (<kbd>&#8984;.</kbd>) does the same. Only one data task runs at a time.</p>
+
+<p>When data gets old, the app offers to update it and asks <strong>Update</strong> or <strong>Not
+Now</strong>.</p>
+
+<div class="seealso">
+  <h2>See also</h2>
+  <ul>
+    <li><a href="flysto.html">Sync flights from FlySto</a></li>
+    <li><a href="adsb-data.html">Fetch ADS-B traces</a></li>
+    <li><a href="faa-data.html">Update FAA airport and approach data</a></li>
+  </ul>
+</div>
+
+</body>
+</html>

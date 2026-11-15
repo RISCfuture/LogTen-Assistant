@@ -1,0 +1,607 @@
+/*
+ * LogTen Assistant site.
+ *
+ * Drawn as a pilot's logbook: ruled paper, ink-blue type, an amber margin rule, and monospaced
+ * figures set in columns. Headings use the system serif; there are no web fonts to load.
+ */
+
+:root {
+  color-scheme: light dark;
+
+  --paper: #f6f1e4;
+  --paper-deep: #ece4d0;
+  --card: #fdfaf2;
+  --ink: #14233b;
+  --ink-soft: #4b5a73;
+  --ink-faint: #7a879b;
+  --rule: #d9cfb6;
+  --rule-blue: #b9c8de;
+  --margin: #c2410c;
+  --action: #14325f;
+  --action-hover: #0b2144;
+  --on-action: #fdfaf2;
+  --link: #1d4e9e;
+  --link-hover: #0b2f6b;
+  --stamp: #8a2a14;
+
+  --page: 1040px;
+  --gutter: 1.5rem;
+  --measure: 64ch;
+  --r: 6px;
+
+  --serif: ui-serif, "New York", "Iowan Old Style", Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0d1626;
+    --paper-deep: #111d31;
+    --card: #14213a;
+    --ink: #e8edf6;
+    --ink-soft: #a3b1c8;
+    --ink-faint: #70809b;
+    --rule: #25344f;
+    --rule-blue: #2c3f60;
+    --margin: #f59e0b;
+    --action: #f0b44a;
+    --action-hover: #ffc965;
+    --on-action: #10192b;
+    --link: #8db8ff;
+    --link-hover: #b8d3ff;
+    --stamp: #f0a07a;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.65 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  margin: 0 0 1rem;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(1.7rem, 3.4vw, 2.3rem);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--link);
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+:focus-visible {
+  outline: 2px solid var(--margin);
+  outline-offset: 3px;
+}
+
+code,
+kbd {
+  font-family: var(--mono);
+  font-size: 0.86em;
+  background: color-mix(in srgb, var(--ink) 8%, transparent);
+  border-radius: 4px;
+  padding: 0.12em 0.4em;
+  overflow-wrap: anywhere;
+}
+
+img {
+  max-width: 100%;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -4rem;
+  z-index: 30;
+  padding: 0.6rem 1rem;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: var(--r);
+}
+
+.skip-link:focus {
+  top: 0.75rem;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--page);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.band {
+  padding-block: 4.5rem;
+  scroll-margin-top: 4rem;
+}
+
+.band-ruled {
+  background:
+    linear-gradient(90deg, transparent 2.6rem, var(--margin) 2.6rem, var(--margin) calc(2.6rem + 1px), transparent calc(2.6rem + 1px)),
+    repeating-linear-gradient(transparent 0 2.1rem, var(--rule-blue) 2.1rem calc(2.1rem + 1px));
+  background-color: var(--card);
+  border-block: 1px solid var(--rule);
+}
+
+.tag {
+  margin: 0 0 0.9rem;
+  font: 600 0.78rem/1 var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--stamp);
+}
+
+.lede {
+  max-width: var(--measure);
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+}
+
+.fine {
+  font-size: 0.875rem;
+  color: var(--ink-faint);
+}
+
+/* Header */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: saturate(160%) blur(14px);
+  border-bottom: 1px solid var(--rule);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-block: 0.65rem;
+}
+
+.wordmark {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font: 700 1.1rem var(--serif);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.wordmark img {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+  margin-right: auto;
+  font-size: 0.92rem;
+}
+
+.site-nav a {
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.7rem 1.4rem;
+  border: 1px solid var(--ink);
+  border-radius: var(--r);
+  background: transparent;
+  color: var(--ink);
+  font: 600 0.95rem/1.3 var(--sans);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background: color-mix(in srgb, var(--ink) 8%, transparent);
+  color: var(--ink);
+}
+
+.btn-primary {
+  background: var(--action);
+  border-color: var(--action);
+  color: var(--on-action);
+}
+
+.btn-primary:hover {
+  background: var(--action-hover);
+  border-color: var(--action-hover);
+  color: var(--on-action);
+}
+
+.btn-sm {
+  padding: 0.4rem 0.95rem;
+  font-size: 0.88rem;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Hero */
+
+.hero {
+  padding-block: 4rem 3rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero h1 {
+  max-width: 14ch;
+}
+
+.brew {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 0.75rem 1rem;
+  background: var(--paper-deep);
+  border: 1px solid var(--rule);
+  border-radius: var(--r);
+  font: 0.86rem/1.4 var(--mono);
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+/* Logbook page: a ruled sheet with a tabular header, used as the hero's picture. */
+
+.sheet {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: var(--r);
+  box-shadow: 0 18px 40px -26px rgb(20 35 59 / 45%);
+  overflow-x: auto;
+}
+
+.sheet table {
+  width: 100%;
+  min-width: 20rem;
+  border-collapse: collapse;
+  font: 0.8rem/1.3 var(--mono);
+}
+
+.sheet caption {
+  padding: 0.7rem 0.9rem;
+  text-align: left;
+  font: 700 0.72rem var(--mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  border-bottom: 2px solid var(--ink);
+}
+
+.sheet th,
+.sheet td {
+  padding: 0.5rem 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid var(--rule-blue);
+}
+
+.sheet th {
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.sheet td.num {
+  text-align: right;
+}
+
+.flag {
+  color: var(--stamp);
+  font-weight: 700;
+}
+
+.stamp {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  border: 2px solid var(--stamp);
+  border-radius: 4px;
+  color: var(--stamp);
+  font: 700 0.72rem var(--mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transform: rotate(-3deg);
+}
+
+/* Cards and grids */
+
+.grid-2,
+.grid-3 {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--margin);
+  border-radius: var(--r);
+  padding: 1.5rem;
+}
+
+.card p:last-child,
+.card ul:last-child {
+  margin-bottom: 0;
+}
+
+.band-ruled .card {
+  background: var(--paper);
+}
+
+.steps {
+  counter-reset: step;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.1rem;
+  max-width: var(--measure);
+}
+
+.steps li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 3.4rem;
+}
+
+.steps li::before {
+  content: counter(step, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  font: 700 1.1rem var(--mono);
+  color: var(--margin);
+}
+
+.steps strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+}
+
+.shot {
+  margin: 0;
+}
+
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgb(20 35 59 / 0.12), 0 18px 40px -12px rgb(20 35 59 / 0.35);
+}
+
+.shot figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--ink-faint);
+}
+
+/* Documents (privacy, support) */
+
+.doc {
+  max-width: 46rem;
+  padding-block: 3.5rem 5rem;
+}
+
+.doc h2 {
+  margin-top: 2.5rem;
+  font-size: 1.6rem;
+}
+
+.doc li {
+  margin-bottom: 0.5rem;
+}
+
+.doc table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.92rem;
+}
+
+.doc th,
+.doc td {
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--rule);
+}
+
+.doc th {
+  font: 600 0.78rem var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  border-bottom: 2px solid var(--ink);
+}
+
+.doc-date {
+  color: var(--ink-faint);
+  font-family: var(--mono);
+  font-size: 0.85rem;
+}
+
+.doc-summary {
+  margin: 1.5rem 0 2rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--margin);
+  border-radius: var(--r);
+}
+
+.doc-summary h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.doc-summary ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+details {
+  border-bottom: 1px solid var(--rule);
+  padding: 0.9rem 0;
+}
+
+summary {
+  cursor: pointer;
+  font: 700 1.1rem var(--serif);
+}
+
+details p {
+  margin: 0.7rem 0 0;
+  max-width: var(--measure);
+}
+
+/* 404 */
+
+.gone {
+  padding-block: 6rem;
+  text-align: center;
+}
+
+.gone-code {
+  font: 700 clamp(4rem, 14vw, 8rem)/1 var(--mono);
+  color: var(--margin);
+  margin-bottom: 1rem;
+}
+
+.gone-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Footer */
+
+.site-footer {
+  border-top: 1px solid var(--rule);
+  padding-block: 2.5rem;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+  margin: 0 0 1rem;
+}
+
+.footer-links a {
+  color: var(--ink-soft);
+}
+
+.disclaimer {
+  max-width: var(--measure);
+  margin: 0 0 0.5rem;
+}
+
+@media (max-width: 820px) {
+  .hero-grid,
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-grid {
+    gap: 2rem;
+  }
+
+  .header-inner {
+    flex-wrap: wrap;
+  }
+
+  .site-nav {
+    order: 3;
+    width: 100%;
+  }
+
+  .band {
+    padding-block: 3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

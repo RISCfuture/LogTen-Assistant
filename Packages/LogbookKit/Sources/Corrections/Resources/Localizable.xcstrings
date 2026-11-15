@@ -1,0 +1,110 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@ can’t be changed through LogTen’s import." : {
+
+    },
+    "%@ isn’t a valid value for %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ isn’t a valid value for %2$@."
+          }
+        }
+      }
+    },
+    "Another approved finding sets this field differently." : {
+
+    },
+    "Another entry has the same flight key." : {
+
+    },
+    "Back up the logbook again before applying corrections." : {
+
+    },
+    "Edit the entry in LogTen instead." : {
+
+    },
+    "Entry %@ changes %@ more than once." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Entry %1$@ changes %2$@ more than once."
+          }
+        }
+      }
+    },
+    "Entry %@ has no flight key, so LogTen can’t import changes to it." : {
+
+    },
+    "No" : {
+
+    },
+    "No findings were selected." : {
+
+    },
+    "None" : {
+
+    },
+    "Open the entry in LogTen to make the change shown, or use Flight Audit in LogTen on iPhone or iPad." : {
+
+    },
+    "The corrections couldn’t be packaged for LogTen." : {
+
+    },
+    "The corrections couldn’t be proposed." : {
+
+    },
+    "The corrections couldn’t be sent to LogTen." : {
+
+    },
+    "The entry changed after the finding was approved." : {
+
+    },
+    "The entry has no flight key for LogTen’s import." : {
+
+    },
+    "The entry is locked." : {
+
+    },
+    "The entry is signed; changing it removes the signature." : {
+
+    },
+    "The entry no longer exists." : {
+
+    },
+    "The entry no longer matches the audit. Run the audit again before changing it." : {
+
+    },
+    "The entry’s flight key changed." : {
+
+    },
+    "The field no longer holds the value the change replaces." : {
+
+    },
+    "The finding proposes no change." : {
+
+    },
+    "The logbook backup is damaged." : {
+
+    },
+    "These files don’t match the manifest: %@." : {
+
+    },
+    "This development build only records import packages, unless a disposable logbook is declared open in LogTen." : {
+
+    },
+    "This entry is locked. Unlock it in LogTen, make the change shown, then lock it again if you want it locked." : {
+
+    },
+    "This entry is signed. Unlocking it in LogTen removes its signature. Make the change shown, then have the entry signed again; LogTen signs entries on iPhone or iPad." : {
+
+    },
+    "Yes" : {
+
+    }
+  },
+  "version" : "1.0"
+}

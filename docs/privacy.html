@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy — LogTen Assistant</title>
+    <meta name="description" content="What LogTen Assistant sends off your Mac: redacted crash reports, update checks, and the downloads you start. Your logbook is never uploaded." />
+    <link rel="canonical" href="https://riscfuture.github.io/LogTen-Assistant/privacy.html" />
+    <meta name="author" content="Tim Morgan" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#f6f1e4" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0d1626" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="assets/icon.png" />
+    <link rel="apple-touch-icon" href="assets/icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="LogTen Assistant" />
+    <meta property="og:url" content="https://riscfuture.github.io/LogTen-Assistant/privacy.html" />
+    <meta property="og:title" content="Privacy — LogTen Assistant" />
+    <meta property="og:description" content="What LogTen Assistant sends off your Mac: redacted crash reports, update checks, and the downloads you start. Your logbook is never uploaded." />
+    <meta property="og:image" content="https://riscfuture.github.io/LogTen-Assistant/assets/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Privacy — LogTen Assistant" />
+    <meta name="twitter:description" content="What LogTen Assistant sends off your Mac: redacted crash reports, update checks, and the downloads you start. Your logbook is never uploaded." />
+    <meta name="twitter:image" content="https://riscfuture.github.io/LogTen-Assistant/assets/og.png" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="wordmark" href="./">
+          <img src="assets/icon.png" width="28" height="28" alt="" />
+          <span>LogTen Assistant</span>
+        </a>
+        <nav class="site-nav" aria-label="Sections">
+          <a href="index.html#workflows">Workflows</a>
+          <a href="index.html#safety">Safety</a>
+          <a href="index.html#sources">Data sources</a>
+          <a href="index.html#download">Download</a>
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy</a>
+        </nav>
+        <a class="btn btn-primary btn-sm" href="https://github.com/RISCfuture/LogTen-Assistant/releases/latest">Download</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <article class="wrap doc">
+        <p class="tag">Privacy</p>
+        <h1>Privacy</h1>
+        <p class="doc-date">LogTen Assistant · Updated 14 November 2026</p>
+
+        <div class="doc-summary">
+          <h2>In short</h2>
+          <ul>
+            <li><strong>Your logbook is never uploaded.</strong> The one exception is data logs you choose to upload to FlySto yourself.</li>
+            <li>There is no account, no analytics and no advertising.</li>
+            <li>Release builds send redacted crash and diagnostic reports to Sentry. Nothing in them identifies you or your flights.</li>
+            <li>Everything else the app contacts is a public download or a service you set up yourself.</li>
+          </ul>
+        </div>
+
+        <h2>What stays on your Mac</h2>
+        <p>
+          LogTen Assistant reads snapshot copies of your logbook folder. The logbook, its snapshots,
+          backups, your review decisions and notes, the history of applied fixes, downloaded traces and
+          FAA data are stored on your Mac. Credentials you enter are kept in your Keychain. The app does
+          not read the logbook until you choose its folder, and never opens LogTen’s live store.
+        </p>
+
+        <h2>What the app contacts</h2>
+        <table>
+          <thead><tr><th>Service</th><th>When</th><th>What is sent</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><a href="https://sentry.io">Sentry</a></td>
+              <td>Release builds, after a crash or a diagnostic event.</td>
+              <td>Crash and diagnostic reports about the app, with personal details redacted. They do not include your logbook, flight data, registrations, names or file paths.</td>
+            </tr>
+            <tr>
+              <td>GitHub releases API</td>
+              <td>When the app checks for updates.</td>
+              <td>An ordinary request for the list of public releases. Nothing about you, your Mac or your logbook.</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.flysto.net">FlySto</a></td>
+              <td>Only if you add an API token, and you sync, import links or upload.</td>
+              <td>Your API token, to fetch the logs added to your account. If you choose <em>Upload Data Logs to FlySto…</em>, the data log files you select. Nothing else is uploaded.</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.adsb.lol">adsb.lol</a> (via GitHub)</td>
+              <td>When you fetch ADS-B data.</td>
+              <td>Requests for the public daily archives for the days you choose. The app discards everything except your aircraft’s traces as it downloads; which aircraft you chose is not sent.</td>
+            </tr>
+            <tr>
+              <td><a href="https://opensky-network.org">OpenSky Network</a></td>
+              <td>Only if you add OpenSky credentials.</td>
+              <td>Your OpenSky client ID and secret, to the OpenSky sign-in service, to authorize requests to its API.</td>
+            </tr>
+            <tr>
+              <td>FAA (faa.gov, aeronav.faa.gov)</td>
+              <td>When you update NASR or approach data, or automatically if you turn that on.</td>
+              <td>An ordinary download request for the current cycle.</td>
+            </tr>
+            <tr>
+              <td>FAA airmen database</td>
+              <td>Only when you use <em>Look Up…</em> in Logbook Settings.</td>
+              <td>A download request for the public database. The search for your name runs on your Mac; the name is not sent.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Like any download, these requests reveal your IP address to the server that answers them.
+          The app contacts no other servers.
+        </p>
+
+        <h2>Crash and diagnostic reports</h2>
+        <p>
+          Release builds report crashes and diagnostics to <a href="https://sentry.io">Sentry</a> so the
+          developer can find and fix bugs. Reports describe the app’s own state: the crash, the version
+          of the app and macOS, and the app’s own events. They are redacted before they leave the Mac,
+          and carry no personal information. Debug builds, which are built from source, send nothing.
+        </p>
+
+        <h2>Third parties</h2>
+        <p>
+          FlySto, adsb.lol, OpenSky Network, the FAA, GitHub and Sentry operate under their own
+          privacy policies. The data you provide to FlySto and OpenSky is governed by your agreement
+          with them.
+        </p>
+
+        <h2>Changes and questions</h2>
+        <p>
+          If this policy changes, the date above changes with it. For a question, open an issue on
+          <a href="https://github.com/RISCfuture/LogTen-Assistant/issues">GitHub</a>. The source code is public, so every claim here can be
+          checked against it.
+        </p>
+        <p class="fine">Not affiliated with Coradine Aviation Systems; LogTen is a trademark of Coradine.</p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p class="footer-links">
+          <a href="./">Home</a>
+          <a href="https://github.com/RISCfuture/LogTen-Assistant/releases/latest">Download</a>
+          <a href="https://github.com/RISCfuture/LogTen-Assistant">Source</a>
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy</a>
+        </p>
+        <p class="disclaimer">Not affiliated with Coradine Aviation Systems; LogTen is a trademark of Coradine.</p>
+        <p class="fine">© 2026 Tim Morgan</p>
+      </div>
+    </footer>
+  </body>
+</html>

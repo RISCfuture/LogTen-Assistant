@@ -1,0 +1,11 @@
+Aircraft;Date;From;To;Startup time;Brakes off;Takeoff time;Landing time;Brakes on;Shutdown time;Engine running time;Block time;Takeoffs;Landings;Direct distance;Ground distance;Log files;Log formats;Flags
+;;;;;hh:mm;hh:mm;hh:mm;hh:mm;;h;h;;;nm;nm;;;
+N111AA;2026-10-12;KSQL;KRHV;;14:10z;14:22z;15:08z;15:15z;;;1.08;1;1;12.5;14;;;0
+N111AA;2026-10-12;SQL;RHV;;14:10z;14:22z;15:08z;15:15z;;;1.08;1;1;12.5;14;;;0
+N111AA;2026-10-13;KRHV;KSQL;;23:40z;23:50z;00:20z;00:30z;;;0.83;1;1;;;;;
+N111AA;2026-10-14;KSQL;KSQL;;17:00z;;;17:20z;;;0.33;0;0;;;;;
+N222BB;2026-10-15;KSQL;KRHV;;10:00z;10:10z;11:00z;11:10z;;;3;1;1;;;;;
+N333CC;2026-10-16;KSQL;KRHV;;08:00z;08:10z;08:50z;09:00z;;;1;1;1;;;;;
+N333CC;2026-10-16;KSQL;KRHV;;08:00z;08:10z;08:50z;09:00z;;;1;2;1;;;;;
+N444DD;2026-12-01;KSQL;KRHV;;08:00z;08:10z;08:50z;09:00z;;;1;1;1;;;;;
+N555EE;2026-10-17;KSQL;KRHV;;25:99z;;;;;;;1;1;;;;;

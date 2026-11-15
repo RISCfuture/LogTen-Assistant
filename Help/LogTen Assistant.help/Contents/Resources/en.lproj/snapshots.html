@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Why the app reads a copy of your logbook</title>
+  <meta name="AppleTitle" content="Why the app reads a copy of your logbook">
+  <meta name="description" content="LogTen Assistant reads a snapshot of your logbook and never opens LogTen's live store.">
+  <meta name="keywords" content="snapshot, copy, live store, safe, read only, sqlite, logten running">
+  <meta name="robots" content="index, anchor">
+  <link rel="stylesheet" href="logten-assistant-help.css">
+</head>
+<body>
+<a name="snapshots" id="snapshots"></a>
+<figure class="topicIcon"><img src="../help-icon.png" alt="" width="30" height="30"></figure>
+<h1>Why the app reads a copy of your logbook</h1>
+
+<p>LogTen may be writing to its logbook at any moment, and a sandboxed app can only read it. So
+LogTen Assistant never opens the live logbook at all. It works from a <strong>snapshot</strong>: a copy
+of the logbook’s files, made for the audit.</p>
+
+<h2>How a snapshot is made</h2>
+
+<ol>
+  <li>The app copies the logbook’s store and its journal files, using file coordination so LogTen
+    isn’t caught mid-write.</li>
+  <li>It compares each file’s size and modification date from before and after the copy. If anything
+    changed while it copied, it copies again.</li>
+  <li>On the copy only, it merges the journal into the store and runs SQLite’s integrity check.</li>
+</ol>
+
+<p>Everything the app shows you — findings, violations, the flights themselves — comes from the
+snapshot. Choosing <strong>Audit</strong> &#9656; <strong>Run Audit</strong> takes a new one.</p>
+
+<h2>When the logbook changes underneath you</h2>
+
+<p>If you edit in LogTen after an audit, the findings reflect the logbook as it was. Run the audit
+again to catch up. Before applying any fix, the app takes a fresh snapshot and checks each fix
+against it; a fix whose flight changed in the meantime is left out and listed instead. See
+<a href="applying-fixes.html">Apply fixes to your logbook</a>.</p>
+
+<p class="note">The app changes your logbook only through LogTen’s own import, and only when you
+apply fixes and choose to send them. Reading and auditing never write anything.</p>
+
+<div class="seealso">
+  <h2>See also</h2>
+  <ul>
+    <li><a href="getting-started.html">Open a logbook</a></li>
+    <li><a href="applying-fixes.html">Apply fixes to your logbook</a></li>
+  </ul>
+</div>
+
+</body>
+</html>

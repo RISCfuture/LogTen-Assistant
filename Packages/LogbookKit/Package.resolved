@@ -1,0 +1,114 @@
+{
+  "originHash" : "70efdd85024023e2beabda08b3f6871506705b54b9abecc1ed2058c362616924",
+  "pins" : [
+    {
+      "identity" : "defaults",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sindresorhus/Defaults",
+      "state" : {
+        "revision" : "00a7465a0668a87fa159e779b9d80f1f9652357e",
+        "version" : "9.0.9"
+      }
+    },
+    {
+      "identity" : "grdb.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/groue/GRDB.swift.git",
+      "state" : {
+        "revision" : "92a554cd0d5e8d67cb18993c6054e73fe42c066c",
+        "version" : "7.12.0"
+      }
+    },
+    {
+      "identity" : "measurementkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RISCfuture/MeasurementKit.git",
+      "state" : {
+        "revision" : "20c908d2ccefc152dfdc646f9b71b10e8f635822",
+        "version" : "1.2.1"
+      }
+    },
+    {
+      "identity" : "streamingcsv",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RISCfuture/StreamingCSV.git",
+      "state" : {
+        "revision" : "f240a8d5e3f5522dd78e1057f684bb176481f310",
+        "version" : "3.0.0"
+      }
+    },
+    {
+      "identity" : "swift-argument-parser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-argument-parser.git",
+      "state" : {
+        "revision" : "6a52f3251125d74daf04fcbd5e6f08a75d074382",
+        "version" : "1.8.2"
+      }
+    },
+    {
+      "identity" : "swift-macro-toolkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/stackotter/swift-macro-toolkit",
+      "state" : {
+        "revision" : "d6ed555bb83c9f21a292e9769952e8f52610a6e2",
+        "version" : "0.9.0"
+      }
+    },
+    {
+      "identity" : "swift-numerics",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-numerics",
+      "state" : {
+        "revision" : "0c0290ff6b24942dadb83a929ffaaa1481df04a2",
+        "version" : "1.1.1"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-syntax",
+      "state" : {
+        "revision" : "79e4b74a295b6eb74a8b585e3a39d29e70c1dbd1",
+        "version" : "603.0.2"
+      }
+    },
+    {
+      "identity" : "swiftairmen",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RISCfuture/SwiftAirmen.git",
+      "state" : {
+        "revision" : "9391e0dbed807808020fd421a74a71e828d98a48",
+        "version" : "4.0.1"
+      }
+    },
+    {
+      "identity" : "swiftcifp",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RISCfuture/SwiftCIFP.git",
+      "state" : {
+        "revision" : "d57301f98db1b850b9c57d823c7f7dcf996fc730",
+        "version" : "3.0.0"
+      }
+    },
+    {
+      "identity" : "swiftnasr",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RISCfuture/SwiftNASR.git",
+      "state" : {
+        "revision" : "974fa36df8f34adc65f43f5267cfde5b8517d3dc",
+        "version" : "5.0.1"
+      }
+    },
+    {
+      "identity" : "zipfoundation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/weichsel/ZIPFoundation.git",
+      "state" : {
+        "revision" : "22787ffb59de99e5dc1fbfe80b19c97a904ad48d",
+        "version" : "0.9.20"
+      }
+    }
+  ],
+  "version" : 3
+}

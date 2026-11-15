@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+	  Xcode generates the rest of this app's Info.plist from build settings, but it carries only
+	  the keys it knows: an INFOPLIST_KEY_CFBundleHelpBookFolder is silently dropped. These two
+	  are what point AppKit's "LogTen Assistant Help" menu item, and every HelpLink, at the book
+	  that Scripts/build-help-book.sh stages into Contents/Resources.
+	-->
+	<key>CFBundleHelpBookFolder</key>
+	<string>LogTen Assistant.help</string>
+	<key>CFBundleHelpBookName</key>
+	<string>codes.tim.LogTenAssistant.help</string>
+</dict>
+</plist>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Support — LogTen Assistant</title>
+    <meta name="description" content="Get help with LogTen Assistant: where to report a problem, what to include, and answers to common questions." />
+    <link rel="canonical" href="https://riscfuture.github.io/LogTen-Assistant/support.html" />
+    <meta name="author" content="Tim Morgan" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#f6f1e4" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0d1626" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="assets/icon.png" />
+    <link rel="apple-touch-icon" href="assets/icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="LogTen Assistant" />
+    <meta property="og:url" content="https://riscfuture.github.io/LogTen-Assistant/support.html" />
+    <meta property="og:title" content="Support — LogTen Assistant" />
+    <meta property="og:description" content="Get help with LogTen Assistant: where to report a problem, what to include, and answers to common questions." />
+    <meta property="og:image" content="https://riscfuture.github.io/LogTen-Assistant/assets/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Support — LogTen Assistant" />
+    <meta name="twitter:description" content="Get help with LogTen Assistant: where to report a problem, what to include, and answers to common questions." />
+    <meta name="twitter:image" content="https://riscfuture.github.io/LogTen-Assistant/assets/og.png" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="wordmark" href="./">
+          <img src="assets/icon.png" width="28" height="28" alt="" />
+          <span>LogTen Assistant</span>
+        </a>
+        <nav class="site-nav" aria-label="Sections">
+          <a href="index.html#workflows">Workflows</a>
+          <a href="index.html#safety">Safety</a>
+          <a href="index.html#sources">Data sources</a>
+          <a href="index.html#download">Download</a>
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy</a>
+        </nav>
+        <a class="btn btn-primary btn-sm" href="https://github.com/RISCfuture/LogTen-Assistant/releases/latest">Download</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <article class="wrap doc">
+        <p class="tag">Support</p>
+        <h1>Support</h1>
+        <p class="doc-date">LogTen Assistant · Updated 14 November 2026</p>
+
+        <div class="doc-summary">
+          <h2>Getting help</h2>
+          <ul>
+            <li><strong>Open an issue on <a href="https://github.com/RISCfuture/LogTen-Assistant/issues">GitHub</a></strong> for a problem, a question or a request.</li>
+            <li>Choose <strong>Help</strong> &#9656; <strong>LogTen Assistant Help</strong> in the app for the user guide.</li>
+          </ul>
+        </div>
+
+        <h2>When you report a problem</h2>
+        <p>Please include:</p>
+        <ul>
+          <li>the version of LogTen Assistant, LogTen Pro and macOS;</li>
+          <li>what you did and what you expected;</li>
+          <li>for a wrong finding, the finding’s ID. Turn on <strong>Settings</strong> &#9656; <strong>Advanced</strong> &#9656; <strong>Show finding IDs</strong> to see it in the inspector.</li>
+        </ul>
+        <p>Don’t post your logbook or its backups in a public issue.</p>
+
+        <h2>Questions</h2>
+        <details>
+          <summary>Does LogTen Assistant change my logbook on its own?</summary>
+          <p>No. It audits a snapshot copy. It changes the logbook only when you approve fixes and apply them, after a backup, and by default it only records the import packages without sending them to LogTen.</p>
+        </details>
+        <details>
+          <summary>Why can’t it find my logbook?</summary>
+          <p>The app is sandboxed, so it reads a logbook only after you choose its folder. Use File &#9656; Open Default LogTen Logbook…, or Open Logbook… for a folder elsewhere. LogTen Pro must be installed in /Applications.</p>
+        </details>
+        <details>
+          <summary>Why does a flight have no aircraft comparison?</summary>
+          <p>Comparisons need evidence for that flight. Sync FlySto or fetch ADS-B data for the days you flew; the Data Sources page shows the coverage for each aircraft.</p>
+        </details>
+        <details>
+          <summary>A currency rule says “Not Checked.”</summary>
+          <p>A rule can’t run when it is turned off, doesn’t apply to your certificate, or needs a field mapped in Logbook Settings. The page names the reason and offers the setting that lets it run.</p>
+        </details>
+        <details>
+          <summary>Can I undo applied fixes?</summary>
+          <p>Yes. Open Applied History, select the batch and choose Revert Batch…. Restoring from LogTen’s own backups is the supported route for anything else.</p>
+        </details>
+        <details>
+          <summary>Does it tell me whether I was legal to fly?</summary>
+          <p>No. It is an aid for reviewing your own records, and each rule says what it can’t see.</p>
+        </details>
+        <p class="fine">Not affiliated with Coradine Aviation Systems; LogTen is a trademark of Coradine.</p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p class="footer-links">
+          <a href="./">Home</a>
+          <a href="https://github.com/RISCfuture/LogTen-Assistant/releases/latest">Download</a>
+          <a href="https://github.com/RISCfuture/LogTen-Assistant">Source</a>
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy</a>
+        </p>
+        <p class="disclaimer">Not affiliated with Coradine Aviation Systems; LogTen is a trademark of Coradine.</p>
+        <p class="fine">© 2026 Tim Morgan</p>
+      </div>
+    </footer>
+  </body>
+</html>

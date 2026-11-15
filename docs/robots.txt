@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://riscfuture.github.io/LogTen-Assistant/sitemap.xml

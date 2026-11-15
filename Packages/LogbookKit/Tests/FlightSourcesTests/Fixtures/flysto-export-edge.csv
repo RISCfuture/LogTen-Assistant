@@ -1,0 +1,8 @@
+Aircraft;Date;From;To;Startup time;Brakes off;Takeoff time;Landing time;Brakes on;Shutdown time;Engine running time;Block time;Takeoffs;Landings;Direct distance;Ground distance;Log files;Log formats;Flags
+;;;;;hh:mm;hh:mm;hh:mm;hh:mm;;h;h;;;nm;nm;;;
+N888HH;2026-10-20;KSQL;KRHV;09:50z;10:00z;10:10z;11:00z;11:10z;11:20z;1;1.17;1;1;;;;;
+N999II;2026-10-21;KSQL;KRHV;;08:00z;08:10z;08:00z;;;;;1;1;;;;;
+N101KK;2026-10-22;KSQL;KSQL;;;;;;;;;0;0;;;;;
+N101KK;2026-10-22;KSQL;KSQL;;;;;;;;;0;0;;;;;
+N202LL;2026-10-20;KSQL;KRHV;00:02z;00:10z;00:20z;01:00z;01:10z;01:15z;;;1;1;;;log_20261020_235500_ABC123.csv;Garmin G3X;
+N303MM;2026-10-20;KSQL;KRHV;00:02z;00:10z;00:20z;01:00z;01:10z;01:15z;;;1;1;;;log_20261019_235500_ABC123.csv;Garmin G3X;

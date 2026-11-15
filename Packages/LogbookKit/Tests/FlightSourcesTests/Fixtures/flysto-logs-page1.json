@@ -1,0 +1,50 @@
+{
+  "logs": [
+    {
+      "id": "a1b2c3d4",
+      "url": "https://www.flysto.net/logs/a1b2c3d4",
+      "date": "12 Oct 2026",
+      "aircraft": "N123AB",
+      "aircraft-id": "ac_9876xyz",
+      "from": "KDEN",
+      "to": "KASE",
+      "future-field": {"anything": [1, 2, 3]},
+      "parameters": [
+        { "name": "Crew", "crew": [ { "id": 5, "name": "John Smith", "role": "PIC" }, { "id": 7, "name": "Jane Doe", "role": "Instructor" } ] },
+        { "name": "Takeoffs/landings", "value": "1" },
+        { "name": "Brakes off", "value": "2026-10-12T14:10:04Z" },
+        { "name": "Brakes on", "value": "2026-10-12T15:15:30Z" },
+        { "name": "Takeoff time", "value": "2026-10-12T14:22:15Z" },
+        { "name": "Landing time", "value": "2026-10-12T15:08:02Z" },
+        { "name": "Airtime", "value": 46, "units": "min" },
+        { "name": "Ground distance", "value": 112, "units": "nm" },
+        { "name": "Direct distance", "value": 95.5, "units": "nm" },
+        { "name": "Unfamiliar", "value": {"nested": true}, "level": "warn" },
+        { "units": "orphan" },
+        { "name": "Tags", "value": "Training, IFR" }
+      ],
+      "takeoffs": [
+        { "time": "2026-10-12T14:22:15Z", "airport": "KDEN", "runway": "17L", "parameters": [ { "name": "Distance to 50'", "value": 2150, "units": "ft" } ] }
+      ],
+      "approaches": [
+        { "time": "2026-10-12T15:08:02Z", "type": "Landing", "airport": "KASE", "runway": "15", "parameters": [ { "name": "Type", "value": "Full-Stop" } ] },
+        { "time": "2026-10-12T14:55:00Z", "type": "Missed", "airport": "KASE", "runway": "15" }
+      ],
+      "flags": [ { "id": 1, "status": "Included", "severity": "Info", "description": "Anything" } ]
+    },
+    {
+      "id": "e5f6a7b8",
+      "url": "https://www.flysto.net/logs/e5f6a7b8",
+      "date": "12 Oct 2026",
+      "aircraft": "N123AB",
+      "parameters": [
+        { "name": "Brakes off", "value": "2026-10-12T17:00:00Z" },
+        { "name": "Brakes on", "value": "2026-10-12T17:10:00Z" }
+      ],
+      "takeoffs": [],
+      "approaches": []
+    }
+  ],
+  "next": "https://www.flysto.net/public-api/logs?limit=250&cursor=e5f6a7b8:123456",
+  "timestamp": "123456"
+}

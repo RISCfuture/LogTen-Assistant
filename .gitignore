@@ -1,0 +1,29 @@
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+
+# SwiftPM and local builds
+.build/
+
+# Help book search indexes: built into the app bundle, but a hand-run hiutil leaves one here
+Help/**/*.cshelpindex
+
+# SwiftLint's cache of the remote parent config
+.swiftlint/RemoteConfigCache
+
+# fastlane: local secrets and run output. Archives and disk images land in build/, ignored above.
+fastlane/.env
+fastlane/Preview.html
+*.dmg
+
+# Decrypted App Store Connect API key, written here by the certificates repo's bin/api-key.
+asc_api_key.json
+*.p8
+
+# macOS
+.DS_Store
+
+# Scratch: coverage traces
+*.profraw

@@ -1,0 +1,17 @@
+SUSAP KOAKK2AOAK     0     105YHN37431654W122131614E014000009         1800018000C    MNAR    OAKLAND SAN FRANCISCO BAY     720262510
+SUSAP KOAKK2FI12   ARAIDR 010RAIDRK2PC0E  A    IF                                   05000     18000                 0 PS   724561606
+SUSAP KOAKK2FI12   ARAIDR 020ALCATK2PC0EE B 010TF IAAZK2      29600139        PI  + 02900                           0 PS   724572210
+SUSAP KOAKK2FI12   I      010ALCATK2PC0E  I    IF IAAZK2      29600139        PI  J 029000180018000                 0 DS   724581311
+SUSAP KOAKK2FI12   I      020PLAZAK2PC0E  F    CF IAAZK2      2960007811600061PI  G 0180001800            OAK   K2D 0 DS   724592004
+SUSAP KOAKK2FI12   I      030RW12 K2PG0GY M    CF IAAZK2      2960001811600060PI    00064             -275          0 DS   724601311
+SUSAP KOAKK2FI12   I      040         0  M     VI                     1160                                          0 DS   724611503
+SUSAP KOAKK2FI12   I      050HISISK2PC0E       CF OAK K2      1306002813060030D   - 01600                           0 DS   724621503
+SUSAP KOAKK2FI12   I      060         0        VI                     0900                                          0 DS   724631503
+SUSAP KOAKK2FI12   I      070DECOTK2EA0EY      CF OAK K2      1137011011370060D   + 05100                           0 DS   724641503
+SUSAP KOAKK2FI12   I      080DECOTK2EA0EE  L   HM                     2937T010    + 05100                           0 DS   724651503
+SUSAP KOAKK2FR12-Y R      020PLAZAK2PC1E  F 010TF                                   01800                 RW12  K2PGA JS   725772408
+SUSAP KOAKK2FR12-Y R      020PLAZAK2PC2WALPV       ALNAV/VNAV ALNAV                                                   JS   725781311
+SUSAP KOAKK2FR12-Y R      030RW12 K2PG0GY M 031TF                                   00064             -275          A JS   725802408
+SUSAP KOAKK2CPLAZA  K20   C     N37374200W122140100                       E0140                   PLAZA                    10000
+SUSAP KOAKK2CALCAT  K20   C     N37505500W122391200                       E0140                   ALCAT                    10001
+SUSAP KOAKK2CHISIS  K20   C     N37330000W121580000                       E0140                   HISIS                    10002

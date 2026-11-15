@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Check for updates</title>
+  <meta name="AppleTitle" content="Check for updates">
+  <meta name="description" content="How LogTen Assistant finds new versions on GitHub, and how to update with Homebrew.">
+  <meta name="keywords" content="update, upgrade, new version, release, github, homebrew, cask, download">
+  <meta name="robots" content="index, anchor">
+  <link rel="stylesheet" href="logten-assistant-help.css">
+</head>
+<body>
+<a name="updates" id="updates"></a>
+<figure class="topicIcon"><img src="../help-icon.png" alt="" width="30" height="30"></figure>
+<h1>Check for updates</h1>
+
+<p>LogTen Assistant keeps itself current: it asks GitHub whether a newer release exists and offers it
+to you.</p>
+
+<h2>Set how often the app checks</h2>
+
+<ol>
+  <li>Choose <strong>LogTen Assistant</strong> &#9656; <strong>Settings</strong> (<kbd>&#8984;,</kbd>)
+    and click <strong>Updates</strong>.</li>
+  <li>Set <strong>Check for updates</strong> to <strong>Hourly</strong>, <strong>Daily</strong>,
+    <strong>Weekly</strong> or <strong>Never</strong>.</li>
+  <li>Turn on <strong>Include prerelease versions</strong> if you want beta builds too.</li>
+</ol>
+
+<p>The schedule only runs while the app is open. A prerelease is a release marked as such on GitHub:
+a build published for testing before it’s declared final. Leave the switch off and you’re offered
+finished releases only.</p>
+
+<p><strong>Last checked</strong> shows when the last check finished. <strong>Check Now</strong> runs
+one immediately. The same check is in the app menu as <strong>LogTen Assistant</strong> &#9656;
+<strong>Check for Updates…</strong>.</p>
+
+<h2>Reconsider a version you skipped</h2>
+
+<p>When the app offers an update, you can skip that version, and it won’t be mentioned again.
+<strong>Reset Skipped Versions</strong> forgets every version you’ve skipped, so each is offered again.
+It’s dimmed unless you’ve skipped something.</p>
+
+<h2>Update with Homebrew</h2>
+
+<p>If you installed with Homebrew, you can update the same way:</p>
+
+<p><code>brew upgrade --cask logten-assistant</code></p>
+
+<p>You can also download any release from
+<a href="https://github.com/RISCfuture/LogTen-Assistant/releases/latest">GitHub</a>.</p>
+
+<p class="note">A check is one request to GitHub’s public list of releases. It sends nothing about
+you, your Mac or your logbook — see <a href="privacy-and-data.html">What the app sends, and what it
+doesn’t</a>.</p>
+
+<div class="seealso">
+  <h2>See also</h2>
+  <ul>
+    <li><a href="privacy-and-data.html">What the app sends, and what it doesn’t</a></li>
+  </ul>
+</div>
+
+</body>
+</html>

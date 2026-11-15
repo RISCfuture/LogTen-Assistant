@@ -1,0 +1,110 @@
+name: Release
+
+# Pushing a version tag archives the app, notarizes it, packages it as a disk image, publishes it as
+# a GitHub release, and hands the release to the Homebrew tap.
+#
+# The project is the version source. A tag names the version it releases, and the run refuses it
+# unless the project's MARKETING_VERSION matches and the commit is on main or a release/* branch. The
+# build number is the UTC time of the run.
+#
+# Re-tagging a version is how its build is replaced: the tag push runs all of this again and the
+# GitHub release ends up carrying the newer disk image. A tag push is a deploy, not bookkeeping.
+#
+# Nothing here re-runs the test suites: tag a commit CI has already passed.
+#
+# Tags carry no "v" prefix. The in-app update checker compares release tags against
+# CFBundleShortVersionString, so "1.2" is the tag for version 1.2.
+on:
+  push:
+    tags: ["[0-9]+.[0-9]+*"]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version to release, which must match the project's MARKETING_VERSION.
+        required: true
+        type: string
+
+concurrency:
+  group: ${{ github.workflow }}-${{ inputs.version || github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  download:
+    uses: RISCfuture/XCUITestKit/.github/workflows/ios-release.yml@1.2.1
+    with:
+      runner: xcode-27
+      # Not a platform in the Apple sense. The reusable workflow passes it through to the release
+      # lane verbatim, and `ci_release` reads it as the name of the build to make.
+      platforms: '["download"]'
+      version: ${{ inputs.version || github.ref_name }}
+      certificates-repo: RISCfuture/certificates
+      # Before the build number is even resolved, on a runner with no credentials: a release that
+      # cannot succeed then costs seconds instead of the whole archive.
+      verify-lane: ci_verify_release
+      timeout-minutes: 150
+    secrets:
+      certificates-token: ${{ secrets.CERTIFICATES_TOKEN }}
+      match-password: ${{ secrets.MATCH_PASSWORD }}
+      sentry-auth-token: ${{ secrets.SENTRY_AUTH_TOKEN }}
+
+  publish:
+    name: Publish GitHub release
+    needs: download
+    # Nothing here is Apple-specific: the disk image arrives already built and notarized.
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7.0.1
+
+      - name: Download the notarized disk image
+        uses: actions/download-artifact@v8.0.2
+        with:
+          name: release-download-${{ inputs.version || github.ref_name }}
+          path: artifacts
+
+      - name: Create the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ inputs.version || github.ref_name }}
+        run: |
+          set -o pipefail
+          dmg=$(find artifacts -name '*.dmg' -print -quit)
+          if [ -z "$dmg" ]; then
+            echo "::error::No disk image in the release artifacts."
+            exit 1
+          fi
+
+          # From CHANGELOG.md, not --generate-notes: most work here lands as direct commits rather
+          # than pull requests, so generated notes would describe a fraction of the release.
+          Scripts/release-notes.sh "$VERSION" > release-notes.md
+
+          # A release for the tag can already exist — this job re-run after a later failure, or
+          # a release cut by hand. `gh release create` refuses a duplicate outright, which leaves
+          # a built and notarized disk image with nowhere to go, so an existing release takes the
+          # asset instead of stopping the run.
+          if gh release view "$VERSION" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release upload "$VERSION" \
+              --repo "$GITHUB_REPOSITORY" \
+              --clobber \
+              "$dmg"
+          else
+            gh release create "$VERSION" \
+              --repo "$GITHUB_REPOSITORY" \
+              --title "LogTen Assistant $VERSION" \
+              --notes-file release-notes.md \
+              "$dmg"
+          fi
+
+      # Only once the release and its disk image are up: the tap's audit checks the cask's version
+      # against the latest GitHub release, and its URL against the asset. -f rather than -F, which
+      # would send the version as a number and turn 1.10 into 1.1.
+      - name: Bump the Homebrew cask
+        env:
+          GH_TOKEN: ${{ secrets.HOMEBREW_TAP_TOKEN }}
+          VERSION: ${{ inputs.version || github.ref_name }}
+        run: |
+          gh api repos/RISCfuture/homebrew-tap/dispatches \
+            -f event_type=cask-release \
+            -f 'client_payload[cask]=logten-assistant' \
+            -f "client_payload[version]=${VERSION}"

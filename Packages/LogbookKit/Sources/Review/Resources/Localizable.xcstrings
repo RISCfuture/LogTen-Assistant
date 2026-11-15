@@ -1,0 +1,27 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Run the audit the decisions were exported from, or review this audit again." : {
+
+    },
+    "The decisions were made against a different audit of this logbook." : {
+
+    },
+    "The file decides finding %@ more than once." : {
+
+    },
+    "The file decides finding %@, which this audit doesn’t have." : {
+
+    },
+    "The file uses version %@ of the decision format, which this version of the app doesn’t read." : {
+
+    },
+    "The findings selected for correction don’t match the correction decisions." : {
+
+    },
+    "The review decisions can’t be imported." : {
+
+    }
+  },
+  "version" : "1.0"
+}
