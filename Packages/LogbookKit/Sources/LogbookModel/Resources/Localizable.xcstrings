@@ -1,0 +1,25 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Couldn’t assign the field." : {
+
+    },
+    "The field “%@” can’t hold “%@”." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "The field “%1$@” can’t hold “%2$@”."
+          }
+        }
+      }
+    },
+    "This flight is locked. Approving adds the change to the checklist of changes to make in LogTen yourself, after unlocking the flight." : {
+
+    },
+    "This flight is signed. Unlocking it in LogTen to change it removes the signature. Approving adds the change to the checklist of changes to make in LogTen yourself, after which the flight needs signing again." : {
+
+    }
+  },
+  "version" : "1.0"
+}

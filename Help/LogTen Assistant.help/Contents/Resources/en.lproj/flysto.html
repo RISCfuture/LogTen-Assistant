@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sync flights from FlySto</title>
+  <meta name="AppleTitle" content="Sync flights from FlySto">
+  <meta name="description" content="Connect a FlySto API token, sync flights, import a FlySto CSV export, or upload data logs.">
+  <meta name="keywords" content="flysto, api token, sync, csv, export, web archive, upload, data log, avionics, keychain">
+  <meta name="robots" content="index, anchor">
+  <link rel="stylesheet" href="logten-assistant-help.css">
+</head>
+<body>
+<a name="flysto" id="flysto"></a>
+<figure class="topicIcon"><img src="../help-icon.png" alt="" width="30" height="30"></figure>
+<h1>Sync flights from FlySto</h1>
+
+<p>FlySto turns the data logs your avionics record into flights with times, tracks and approaches.
+LogTen Assistant compares those flights with your logbook.</p>
+
+<h2>Add your API token</h2>
+
+<ol>
+  <li>Sign in at <a href="https://www.flysto.net/account/api">flysto.net/account/api</a> and create
+    an API token.</li>
+  <li>In LogTen Assistant, choose <strong>LogTen Assistant</strong> &#9656; <strong>Settings</strong>
+    (<kbd>&#8984;,</kbd>) and click <strong>Accounts</strong>.</li>
+  <li>Click <strong>Set Up…</strong> beside <strong>FlySto</strong>, paste the token, and click
+    <strong>Test</strong>, then <strong>Save</strong>.</li>
+</ol>
+
+<p>The token is kept in your Keychain. It is sent only to FlySto. The same pane can store OpenSky
+Network credentials, if you have an account there.</p>
+
+<h2>Sync</h2>
+
+<p>Choose <strong>Audit</strong> &#9656; <strong>Sync FlySto</strong> (<kbd>&#8679;&#8984;R</kbd>) or
+click <strong>Sync FlySto</strong> in the toolbar. A sync fetches the logs added since the last one,
+then audits again. The Data Sources page shows the number of records, when you last synced, and when
+you last imported.</p>
+
+<h2>Import a CSV export instead</h2>
+
+<p>You can use FlySto without an API token. Export your flights from FlySto as CSV, then choose
+<strong>File</strong> &#9656; <strong>Import FlySto Export…</strong>, or drop the files on the window.
+Include the Safari web archive of FlySto’s flight list so the app can link each flight to its page.</p>
+
+<h2>Upload data logs</h2>
+
+<p>Choose <strong>Audit</strong> &#9656; <strong>Upload Data Logs to FlySto…</strong>, then <strong>Choose
+Logs…</strong>, and pick the files your avionics recorded. FlySto parses them; the next sync brings the
+results here. This is the one case where a file goes from your Mac to a service, and you start it
+yourself.</p>
+
+<div class="seealso">
+  <h2>See also</h2>
+  <ul>
+    <li><a href="data-sources.html">Where the evidence comes from</a></li>
+    <li><a href="privacy-and-data.html">What the app sends, and what it doesn’t</a></li>
+  </ul>
+</div>
+
+</body>
+</html>

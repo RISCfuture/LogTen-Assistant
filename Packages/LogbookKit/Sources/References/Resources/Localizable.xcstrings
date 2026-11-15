@@ -1,0 +1,51 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Airport checks were not evaluated: configure a dated NASR dataset." : {
+
+    },
+    "Airport has no unambiguous match in this NASR release." : {
+
+    },
+    "Couldn’t load the airport reference data." : {
+
+    },
+    "NASR cycle does not cover the audit date; differences require historical review." : {
+
+    },
+    "No NASR cycle was in effect on %@." : {
+
+    },
+    "Some airport time zones could not be looked up, so time-zone checks were incomplete." : {
+
+    },
+    "Stored airport elevation differs by more than 100 feet." : {
+
+    },
+    "Stored airport position differs by more than 0.5 NM." : {
+
+    },
+    "Stored airport timezone differs from geographic timezone data." : {
+
+    },
+    "The CIFP download doesn’t contain FAACIFP18." : {
+
+    },
+    "The FAA’s server answered with status %@." : {
+
+    },
+    "The NASR distribution contains no airports." : {
+
+    },
+    "The NASR distribution doesn’t identify its cycle." : {
+
+    },
+    "Time zone becomes “%@”." : {
+
+    },
+    "Use the Geographic Time Zone" : {
+
+    }
+  },
+  "version" : "1.0"
+}

@@ -1,0 +1,2295 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "About LogTen Assistant" : {
+
+    },
+    "Acknowledgements" : {
+
+    },
+    "Acknowledgements…" : {
+
+    },
+    "Check for updates" : {
+
+    },
+    "Check for Updates…" : {
+
+    },
+    "Check Now" : {
+
+    },
+    "Copyright © %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Copyright © %@"
+          }
+        }
+      }
+    },
+    "Daily" : {
+
+    },
+    "Hourly" : {
+
+    },
+    "Include prerelease versions" : {
+
+    },
+    "Last checked" : {
+
+    },
+    "LogTen Assistant app icon" : {
+
+    },
+    "LogTen Assistant Website" : {
+
+    },
+    "Not affiliated with Coradine Aviation Systems. LogTen is a trademark of Coradine." : {
+
+    },
+    "OpenSky terms of use" : {
+
+    },
+    "Report an Issue" : {
+
+    },
+    "Report an Issue…" : {
+
+    },
+    "Reset Skipped Versions" : {
+
+    },
+    "Swift Packages" : {
+
+    },
+    "U.S. government data" : {
+
+    },
+    "Updates" : {
+
+    },
+    "Version %@ (%@)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Version %1$@ (%2$@)"
+          }
+        }
+      }
+    },
+    "Website" : {
+
+    },
+    "Weekly" : {
+
+    },
+    "Your FlySto account" : {
+
+    },
+    "—" : {
+
+    },
+    "%@ – %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ – %2$@"
+          }
+        }
+      }
+    },
+    "%@ · ^[%lld trace](inflect: true) found" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · ^[%2$lld trace](inflect: true) found"
+          }
+        }
+      }
+    },
+    "%@ · day %@ of %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · day %2$@ of %3$@"
+          }
+        }
+      }
+    },
+    "%@ → %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ → %2$@"
+          }
+        }
+      }
+    },
+    "%@ ×%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ ×%2$@"
+          }
+        }
+      }
+    },
+    "%@ batches not applied. Their fixes are still approved; apply them later from Approved." : {
+
+    },
+    "%@ entries appeared in the logbook." : {
+
+    },
+    "%@ entries disappeared from the logbook." : {
+
+    },
+    "%@ Findings" : {
+
+    },
+    "%@ findings in %@ are left to review." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ findings in %2$@ are left to review."
+          }
+        }
+      }
+    },
+    "%@ Findings Selected" : {
+
+    },
+    "%@ Flights Selected" : {
+
+    },
+    "%@ has %@ violations." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ has %2$@ violations."
+          }
+        }
+      }
+    },
+    "%@ logs" : {
+
+    },
+    "%@ of %@ · ^[%lld trace](inflect: true) found" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ of %2$@ · ^[%3$lld trace](inflect: true) found"
+          }
+        }
+      }
+    },
+    "%@ of %@ can be marked for correction" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ of %2$@ can be marked for correction"
+          }
+        }
+      }
+    },
+    "%@ of %@ marked for correction" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ of %2$@ marked for correction"
+          }
+        }
+      }
+    },
+    "%@ of %@ on" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ of %2$@ on"
+          }
+        }
+      }
+    },
+    "%@ of %@ to review" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ of %2$@ to review"
+          }
+        }
+      }
+    },
+    "%@ of ^[%lld approved fix](inflect: true)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ of ^[%2$lld approved fix](inflect: true)"
+          }
+        }
+      }
+    },
+    "%@ of ^[%lld violation](inflect: true) on ^[%lld flight](inflect: true)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ of ^[%2$lld violation](inflect: true) on ^[%3$lld flight](inflect: true)"
+          }
+        }
+      }
+    },
+    "%@ Review Decisions" : {
+
+    },
+    "%@, %@Z" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@, %2$@Z"
+          }
+        }
+      }
+    },
+    "%@, changes to %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@, changes to %2$@"
+          }
+        }
+      }
+    },
+    "%@: %@ → %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@: %2$@ → %3$@"
+          }
+        }
+      }
+    },
+    "%@. Reconnecting…" : {
+
+    },
+    "%@. Retrying in %@…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@. Retrying in %2$@…"
+          }
+        }
+      }
+    },
+    "%@…" : {
+
+    },
+    "%@’s Logbook" : {
+
+    },
+    "%@’s records disagree with each other." : {
+
+    },
+    "^[%lld archive](inflect: true), %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "^[%1$lld archive](inflect: true), %2$@"
+          }
+        }
+      }
+    },
+    "^[%lld archive](inflect: true), size unknown" : {
+
+    },
+    "^[%lld batch](inflect: true) applied" : {
+
+    },
+    "^[%lld batch](inflect: true) recorded, not sent to LogTen" : {
+
+    },
+    "^[%lld change](inflect: true) to ^[%lld flight](inflect: true)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "^[%1$lld change](inflect: true) to ^[%2$lld flight](inflect: true)"
+          }
+        }
+      }
+    },
+    "^[%lld day](inflect: true) had no trace of the chosen aircraft." : {
+
+    },
+    "^[%lld earlier decision](inflect: true) no longer apply because their findings are gone." : {
+
+    },
+    "^[%lld file](inflect: true), %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "^[%1$lld file](inflect: true), %2$@"
+          }
+        }
+      }
+    },
+    "^[%lld fix](inflect: true) approved" : {
+
+    },
+    "^[%lld fix](inflect: true) recorded %@ — not sent to LogTen" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "^[%1$lld fix](inflect: true) recorded %2$@ — not sent to LogTen"
+          }
+        }
+      }
+    },
+    "^[%lld rule](inflect: true) not checked" : {
+
+    },
+    "^[%lld violation](inflect: true) on ^[%lld flight](inflect: true)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "^[%1$lld violation](inflect: true) on ^[%2$lld flight](inflect: true)"
+          }
+        }
+      }
+    },
+    "1 batch not applied. Its fixes are still approved; apply them later from Approved." : {
+
+    },
+    "61.31(k) NVG Proficiency Check" : {
+
+    },
+    "61.58 Group: Windows" : {
+
+    },
+    "61.58 Proficiency Check" : {
+
+    },
+    "90 Days" : {
+
+    },
+    "Account" : {
+
+    },
+    "Accounts" : {
+
+    },
+    "Action" : {
+
+    },
+    "Activity" : {
+
+    },
+    "Add a flight instructor rating to the pilot profile to check it." : {
+
+    },
+    "Add an instrument rating to the pilot profile to check it." : {
+
+    },
+    "Add Event" : {
+
+    },
+    "Add Rule" : {
+
+    },
+    "Added by hand" : {
+
+    },
+    "Adds each finding’s identifier to the inspector." : {
+
+    },
+    "ADS-B" : {
+
+    },
+    "ADS-B Downloads" : {
+
+    },
+    "Advanced" : {
+
+    },
+    "Airborne at or above" : {
+
+    },
+    "Aircraft" : {
+
+    },
+    "Aircraft can override these in Logbook Settings." : {
+
+    },
+    "Aircraft Comparisons" : {
+
+    },
+    "Aircraft Flown" : {
+
+    },
+    "Aircraft ID" : {
+
+    },
+    "Aircraft Type" : {
+
+    },
+    "Aircraft Type Fields" : {
+
+    },
+    "Airline Transport" : {
+
+    },
+    "Airplane" : {
+
+    },
+    "Airplane Multi-Engine" : {
+
+    },
+    "Airplane Multi-Engine Land" : {
+
+    },
+    "Airplane Multi-Engine Sea" : {
+
+    },
+    "Airplane Single-Engine" : {
+
+    },
+    "Airplane Single-Engine Land" : {
+
+    },
+    "Airplane Single-Engine Sea" : {
+
+    },
+    "Airport Data" : {
+
+    },
+    "Airport data is from the cycle effective %@." : {
+
+    },
+    "Airport Data Out of Date" : {
+
+    },
+    "Airport Data Unavailable" : {
+
+    },
+    "Airport Differs" : {
+
+    },
+    "Airport Elevation" : {
+
+    },
+    "Airport Position" : {
+
+    },
+    "Airport Time Zone" : {
+
+    },
+    "Alex Aviator’s Logbook" : {
+
+    },
+    "All" : {
+      "comment" : "Audit scope: every flight"
+    },
+    "All %@ marked for correction" : {
+
+    },
+    "All %@ reviewed" : {
+
+    },
+    "All Flights" : {
+
+    },
+    "All Violations" : {
+
+    },
+    "Already in FlySto" : {
+
+    },
+    "Ambiguous Match" : {
+
+    },
+    "Another pilot’s flight or partial credit" : {
+
+    },
+    "Any" : {
+
+    },
+    "API Client" : {
+
+    },
+    "API Token" : {
+
+    },
+    "API Token:" : {
+
+    },
+    "Applied" : {
+
+    },
+    "Applied Fixes" : {
+
+    },
+    "Applied History" : {
+
+    },
+    "Apply" : {
+
+    },
+    "Apply ^[%lld Fix](inflect: true)" : {
+
+    },
+    "Apply ^[%lld fix](inflect: true) to %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Apply ^[%1$lld fix](inflect: true) to %2$@"
+          }
+        }
+      }
+    },
+    "Apply Fixes: back up the logbook and apply the approved fixes through LogTen" : {
+
+    },
+    "Apply Fixes…" : {
+
+    },
+    "Approach" : {
+
+    },
+    "Approach data is from the cycle effective %@." : {
+
+    },
+    "Approach data is out of date." : {
+
+    },
+    "Approach Detail" : {
+
+    },
+    "Approach Not Seen" : {
+
+    },
+    "Approved" : {
+
+    },
+    "ATP Cross-Country" : {
+
+    },
+    "ATP Cross-Country Candidate" : {
+
+    },
+    "ATP Cross-Country Ineligible" : {
+
+    },
+    "Audit" : {
+
+    },
+    "Audit & Fix" : {
+
+    },
+    "Audit Not Run" : {
+
+    },
+    "Auditing entries…" : {
+
+    },
+    "Auditing…" : {
+
+    },
+    "Awaiting Verification" : {
+
+    },
+    "Back Up" : {
+
+    },
+    "Back Up Logbook" : {
+
+    },
+    "Backed up ^[%lld file](inflect: true) to %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Backed up ^[%1$lld file](inflect: true) to %2$@."
+          }
+        }
+      }
+    },
+    "Backing up the logbook…" : {
+
+    },
+    "Backup" : {
+
+    },
+    "Batch" : {
+
+    },
+    "Batch %@ · ^[%lld flight](inflect: true)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Batch %1$@ · ^[%2$lld flight](inflect: true)"
+          }
+        }
+      }
+    },
+    "Batches applied to the logbook, with their verification and revert." : {
+
+    },
+    "Batches you apply appear here, with their verification." : {
+
+    },
+    "BATD, AATD, FTD or FFS." : {
+
+    },
+    "Can’t Be Imported" : {
+
+    },
+    "Cancel" : {
+
+    },
+    "Category" : {
+
+    },
+    "Category and Class Ratings" : {
+
+    },
+    "Certificate" : {
+
+    },
+    "Certificates" : {
+
+    },
+    "Change by Hand" : {
+
+    },
+    "Change Reason" : {
+
+    },
+    "Change…" : {
+
+    },
+    "Changes" : {
+
+    },
+    "Check" : {
+
+    },
+    "Check Size" : {
+
+    },
+    "Check the size before downloading." : {
+
+    },
+    "Checking regulations…" : {
+
+    },
+    "Checkride" : {
+
+    },
+    "Checks" : {
+
+    },
+    "Checks you turn off report nothing the next time the audit runs." : {
+
+    },
+    "Choose" : {
+
+    },
+    "Choose a Correction" : {
+
+    },
+    "Choose Logs…" : {
+
+    },
+    "Choose LogTen’s “group.com.coradine.LogTenPro” folder or a LogTenProData folder." : {
+
+    },
+    "Choose the correction to apply." : {
+
+    },
+    "Choose the CSV exported from a FlySto flight list, and optionally a Safari web archive of the same list." : {
+
+    },
+    "Choose the data logs to upload. FlySto parses each one." : {
+
+    },
+    "Choose the data logs your avionics recorded. FlySto parses them, and the next sync brings the results here." : {
+
+    },
+    "CIFP Cycle" : {
+
+    },
+    "Clear Menu" : {
+
+    },
+    "Client ID:" : {
+
+    },
+    "Client Secret:" : {
+
+    },
+    "Close" : {
+
+    },
+    "Commander" : {
+
+    },
+    "Commercial" : {
+
+    },
+    "Compare Sources" : {
+
+    },
+    "Confirm a takeoff or landing after" : {
+
+    },
+    "Confirmed Currency Events" : {
+
+    },
+    "Connected" : {
+
+    },
+    "Connecting…" : {
+
+    },
+    "Copy “%@” to paste into LogTen" : {
+
+    },
+    "Copy New Value" : {
+
+    },
+    "Correction" : {
+
+    },
+    "Correction: %@" : {
+
+    },
+    "Corrections" : {
+
+    },
+    "Couldn’t download %@." : {
+
+    },
+    "Couldn’t open the logbook." : {
+
+    },
+    "Couldn’t Prepare the Fixes" : {
+
+    },
+    "Count Differs" : {
+
+    },
+    "Count Violations" : {
+
+    },
+    "Coverage" : {
+
+    },
+    "Coverage Gap" : {
+
+    },
+    "Create an API client in your OpenSky account, then paste its client ID and secret here." : {
+
+    },
+    "Create an API token in your FlySto account, then paste it here." : {
+
+    },
+    "Crew" : {
+
+    },
+    "Cross-Country" : {
+
+    },
+    "Cross-Country Night" : {
+
+    },
+    "Cross-country time meeting the ATP definition." : {
+
+    },
+    "CSV" : {
+
+    },
+    "Custom Fields" : {
+
+    },
+    "Custom Rule %@" : {
+
+    },
+    "Custom Rules" : {
+
+    },
+    "Data" : {
+
+    },
+    "Data Logs" : {
+
+    },
+    "Data Sources" : {
+
+    },
+    "Date" : {
+
+    },
+    "Date Differs" : {
+
+    },
+    "Days" : {
+
+    },
+    "Days Covered" : {
+
+    },
+    "Decision" : {
+
+    },
+    "Default: %@" : {
+
+    },
+    "Default: %@ %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Default: %1$@ %2$@"
+          }
+        }
+      }
+    },
+    "Derived from the N-number" : {
+
+    },
+    "Details" : {
+
+    },
+    "Discrepancy" : {
+
+    },
+    "Dismiss" : {
+
+    },
+    "Distance Differs" : {
+
+    },
+    "Done" : {
+
+    },
+    "Download" : {
+
+    },
+    "Download %@" : {
+
+    },
+    "Download and Search" : {
+
+    },
+    "Download stopped." : {
+
+    },
+    "Downloading ADS-B archives" : {
+
+    },
+    "Downloading ADS-B… %@" : {
+
+    },
+    "Downloading the airmen database…" : {
+
+    },
+    "Dual Received" : {
+
+    },
+    "Dual Received Night" : {
+
+    },
+    "Duplicates Within" : {
+
+    },
+    "Duty" : {
+
+    },
+    "Each batch is sent to LogTen, which asks you to confirm it. ⌘Z can’t undo this. Revert a batch from Applied History." : {
+
+    },
+    "Edit Aircraft…" : {
+
+    },
+    "Edit Note" : {
+
+    },
+    "Edit Pilot Profile…" : {
+
+    },
+    "End" : {
+
+    },
+    "End movement after stopped for" : {
+
+    },
+    "Engine Start" : {
+
+    },
+    "Engine Stop" : {
+
+    },
+    "Enter a Name" : {
+
+    },
+    "Entries that disagree with FlySto or ADS-B evidence for the aircraft." : {
+
+    },
+    "Entries whose times, counts or references disagree with each other." : {
+
+    },
+    "Entry %@ is now locked or signed." : {
+
+    },
+    "Entry %@ was signed or lost its signature." : {
+
+    },
+    "Entry %@’s %@ is %@, not %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Entry %1$@’s %2$@ is %3$@, not %4$@."
+          }
+        }
+      }
+    },
+    "Entry %@’s crew, passengers or approaches changed." : {
+
+    },
+    "Entry %@’s flight key changed." : {
+
+    },
+    "Entry %@’s flight key is no longer unique." : {
+
+    },
+    "Event" : {
+
+    },
+    "Events the logbook doesn’t show, such as a flight review logged elsewhere." : {
+
+    },
+    "Every change appears in the logbook, and nothing else changed." : {
+
+    },
+    "Every check passed." : {
+
+    },
+    "Every chosen day is already downloaded." : {
+
+    },
+    "Examiner" : {
+
+    },
+    "Explanation" : {
+
+    },
+    "Export Findings" : {
+
+    },
+    "Export Review Decisions" : {
+
+    },
+    "Export Review Decisions…" : {
+
+    },
+    "FAA Airmen Database" : {
+
+    },
+    "Fetch ADS-B Data" : {
+
+    },
+    "Fetch ADS-B Data…" : {
+
+    },
+    "Fetch…" : {
+
+    },
+    "Field" : {
+
+    },
+    "Fields are matched to the titles you gave them in LogTen." : {
+
+    },
+    "Fills in your certificate and ratings from the FAA’s records." : {
+
+    },
+    "Find…" : {
+
+    },
+    "Finding" : {
+
+    },
+    "Finding archives…" : {
+
+    },
+    "Finding ID" : {
+
+    },
+    "Findings with no correction, or with several to choose from, aren’t marked for correction together." : {
+
+    },
+    "First Name" : {
+
+    },
+    "Fixes you approved, ready to back up and apply through LogTen." : {
+
+    },
+    "Flight" : {
+
+    },
+    "Flight Attendant" : {
+
+    },
+    "Flight Engineer" : {
+
+    },
+    "Flight Fields" : {
+
+    },
+    "Flight Instructor" : {
+
+    },
+    "Flight Instructor Ratings" : {
+
+    },
+    "Flight Review" : {
+
+    },
+    "Flight review (61.56)" : {
+
+    },
+    "Flight Review Group: Alternatives" : {
+
+    },
+    "Flights" : {
+
+    },
+    "Flights in FlySto or ADS-B data that no logbook entry accounts for." : {
+
+    },
+    "Flown" : {
+
+    },
+    "FlySto" : {
+
+    },
+    "FlySto Aircraft ID" : {
+
+    },
+    "FlySto API Token" : {
+
+    },
+    "FlySto hasn’t synced since %@." : {
+
+    },
+    "FlySto hasn’t synced yet." : {
+
+    },
+    "FlySto parses the aircraft’s data logs. Sync fetches logs added since the last sync; you can also drop a CSV export and its web archive on the window." : {
+
+    },
+    "FlySto sync status, ADS-B downloads and coverage by aircraft and date." : {
+
+    },
+    "From" : {
+
+    },
+    "Full Stop" : {
+
+    },
+    "Full Stops" : {
+
+    },
+    "Glider" : {
+
+    },
+    "Ground Stop" : {
+
+    },
+    "Group" : {
+
+    },
+    "Groups & Currency" : {
+
+    },
+    "Hide Inspector" : {
+
+    },
+    "Hobbs In" : {
+
+    },
+    "Hobbs Out" : {
+
+    },
+    "Home Time Zone" : {
+
+    },
+    "I made a backup in LogTen’s Backups view" : {
+
+    },
+    "ICAO Address" : {
+
+    },
+    "ICAO type designators, separated by commas, such as SF50, C510." : {
+
+    },
+    "Identity" : {
+
+    },
+    "If the pilot holds a higher certificate, change it in the pilot profile." : {
+
+    },
+    "IFR Capable" : {
+
+    },
+    "Ignore instruction activity" : {
+
+    },
+    "Ignore unmatched ADS-B activity (shared aircraft)" : {
+
+    },
+    "Import" : {
+
+    },
+    "Import FlySto Export" : {
+
+    },
+    "Import FlySto Export…" : {
+
+    },
+    "Import…" : {
+
+    },
+    "Imported %@ FlySto records from %@ rows." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Imported %1$@ FlySto records from %2$@ rows."
+          }
+        }
+      }
+    },
+    "Importing FlySto export…" : {
+
+    },
+    "In" : {
+
+    },
+    "Instructor" : {
+
+    },
+    "Instrument Airplane" : {
+
+    },
+    "Instrument experience (61.57(c))" : {
+
+    },
+    "Instrument Group: Recovery" : {
+
+    },
+    "Instrument Group: Tracking" : {
+
+    },
+    "Instrument Helicopter" : {
+
+    },
+    "Instrument Powered Lift" : {
+
+    },
+    "Instrument Proficiency Check" : {
+
+    },
+    "Instrument proficiency check (61.57(d))" : {
+
+    },
+    "Instrument Rating" : {
+
+    },
+    "Instrument Ratings" : {
+
+    },
+    "Intercepting and Tracking" : {
+
+    },
+    "IPC" : {
+
+    },
+    "JSON" : {
+
+    },
+    "Keep as Logged" : {
+
+    },
+    "Keep up to" : {
+
+    },
+    "Kept as logged" : {
+
+    },
+    "Kept as Logged" : {
+
+    },
+    "kt" : {
+
+    },
+    "Landing" : {
+
+    },
+    "Landings" : {
+
+    },
+    "Last 90 Days" : {
+
+    },
+    "Last Imported" : {
+
+    },
+    "Last Name" : {
+
+    },
+    "Last Synced" : {
+
+    },
+    "Lighter-than-Air" : {
+
+    },
+    "Lighter-Than-Air Airship" : {
+
+    },
+    "Lighter-Than-Air Balloon" : {
+
+    },
+    "Location" : {
+
+    },
+    "Logbook" : {
+
+    },
+    "Logbook Consistency" : {
+
+    },
+    "Logbook Settings" : {
+
+    },
+    "Logbook Settings…" : {
+
+    },
+    "Logbooks you open appear here." : {
+
+    },
+    "LogTen %@" : {
+
+    },
+    "LogTen asks you to confirm each import. The first batch is a single flight, so a problem shows up before the rest are sent." : {
+
+    },
+    "LogTen Assistant" : {
+
+    },
+    "LogTen Assistant reads a copy of your logbook and never changes it on its own." : {
+
+    },
+    "LogTen can’t import this change. Approving it adds it to the checklist of changes to make in LogTen yourself." : {
+
+    },
+    "LogTen Pro Logbook" : {
+
+    },
+    "LogTen Pro’s default logbook" : {
+
+    },
+    "Longest Plausible Flight" : {
+
+    },
+    "Longest Plausible Flight Override" : {
+
+    },
+    "Look Up in FAA Airmen Database" : {
+
+    },
+    "Look Up…" : {
+
+    },
+    "Lookup Failed" : {
+
+    },
+    "Make a backup in LogTen first: choose View ▸ Backups and click +. This sends LogTen the ^[%lld original value](inflect: true), after checking that the flights haven’t changed since." : {
+
+    },
+    "Map Fields…" : {
+
+    },
+    "Map of the recorded track, with %@ detected events" : {
+
+    },
+    "Mark findings for correction in a review page to apply them here." : {
+
+    },
+    "Mark for Correction" : {
+
+    },
+    "Mark for Correction: %@" : {
+
+    },
+    "Marked for correction" : {
+
+    },
+    "Marks a 14 CFR 61.31(k) night-vision-goggle proficiency check." : {
+
+    },
+    "Marks a 14 CFR 61.58 proficiency check." : {
+
+    },
+    "Marks a practical test." : {
+
+    },
+    "Marks intercepting and tracking courses for IFR currency." : {
+
+    },
+    "Matches from the FAA database appear here." : {
+
+    },
+    "Missing Times" : {
+
+    },
+    "More Decisions" : {
+
+    },
+    "Must" : {
+
+    },
+    "N12345, C-GABC" : {
+
+    },
+    "NASR and approach data are out of date." : {
+
+    },
+    "NASR Cycle" : {
+
+    },
+    "NASR data is out of date." : {
+
+    },
+    "Navigation Coverage" : {
+
+    },
+    "Needs Evidence" : {
+
+    },
+    "Needs more evidence" : {
+
+    },
+    "Needs More Evidence" : {
+
+    },
+    "Never" : {
+
+    },
+    "Next Unreviewed" : {
+
+    },
+    "Night Full Stops Differ" : {
+
+    },
+    "Night Full-Stop Landings" : {
+
+    },
+    "Night full-stop landings, for night passenger currency." : {
+
+    },
+    "Night Group: Full Stops" : {
+
+    },
+    "Night Takeoffs" : {
+
+    },
+    "Night Takeoffs or Landings Differ" : {
+
+    },
+    "Night takeoffs, for night passenger currency." : {
+
+    },
+    "Night Time Differs" : {
+
+    },
+    "No" : {
+
+    },
+    "No aircraft flown." : {
+
+    },
+    "No Aircraft Selected" : {
+
+    },
+    "No aircraft with a known ICAO address was flown on these days. Add an address in Logbook Settings ▸ Aircraft." : {
+
+    },
+    "No Approved Fixes" : {
+
+    },
+    "No Batch Selected" : {
+
+    },
+    "No Finding Selected" : {
+
+    },
+    "No findings" : {
+
+    },
+    "No findings on flights from the last 90 days." : {
+
+    },
+    "No findings on flights from this year." : {
+
+    },
+    "No fixes approved" : {
+
+    },
+    "No flight appears to break the regulations checked." : {
+
+    },
+    "No Flight Selected" : {
+
+    },
+    "No matches" : {
+
+    },
+    "No pilot certificate" : {
+
+    },
+    "No Reason" : {
+
+    },
+    "No Recent Logbooks" : {
+
+    },
+    "No Violations" : {
+
+    },
+    "none" : {
+
+    },
+    "None" : {
+
+    },
+    "Not Airports" : {
+
+    },
+    "Not applied" : {
+
+    },
+    "not be negative" : {
+
+    },
+    "Not Checked" : {
+
+    },
+    "Not downloaded" : {
+
+    },
+    "not exceed" : {
+
+    },
+    "Not Mapped" : {
+
+    },
+    "Not Now" : {
+
+    },
+    "Not reviewed" : {
+
+    },
+    "Not set up" : {
+
+    },
+    "Note" : {
+
+    },
+    "Notes" : {
+
+    },
+    "Nothing applied" : {
+
+    },
+    "Nothing Applied" : {
+
+    },
+    "Nothing Selected" : {
+
+    },
+    "Nothing to Review" : {
+
+    },
+    "NVG" : {
+
+    },
+    "NVG Landings" : {
+
+    },
+    "NVG Takeoffs" : {
+
+    },
+    "Observer" : {
+
+    },
+    "Off" : {
+
+    },
+    "Off Duty" : {
+
+    },
+    "OK" : {
+
+    },
+    "On" : {
+
+    },
+    "On Duty" : {
+
+    },
+    "On the ground at or below" : {
+
+    },
+    "Open" : {
+
+    },
+    "Open a logbook in LogTen Assistant first." : {
+
+    },
+    "Open Default LogTen Logbook…" : {
+
+    },
+    "Open FlySto Account Settings" : {
+
+    },
+    "Open Log" : {
+
+    },
+    "Open Logbook" : {
+
+    },
+    "Open Logbook…" : {
+
+    },
+    "Open OpenSky Account" : {
+
+    },
+    "Open Other Folder…" : {
+
+    },
+    "Open Recent" : {
+
+    },
+    "Opening…" : {
+
+    },
+    "OpenSky" : {
+
+    },
+    "OpenSky Network" : {
+
+    },
+    "OpenSky Network API Client" : {
+
+    },
+    "Operations" : {
+
+    },
+    "Other" : {
+
+    },
+    "Other Audit Rules" : {
+
+    },
+    "Other Registrations" : {
+
+    },
+    "Out" : {
+
+    },
+    "Owner" : {
+
+    },
+    "P1 u/s" : {
+
+    },
+    "P1 u/s Night" : {
+
+    },
+    "Package" : {
+
+    },
+    "Package JSON" : {
+
+    },
+    "Packages are recorded in the logbook’s workspace folder for review." : {
+
+    },
+    "Packages are recorded in the logbook’s workspace folder, not sent to LogTen." : {
+
+    },
+    "Passenger Group: Window" : {
+
+    },
+    "Passengers" : {
+
+    },
+    "PIC" : {
+
+    },
+    "PIC Night" : {
+
+    },
+    "Pilot" : {
+
+    },
+    "Place identifiers, separated by commas, that aren’t airports and shouldn’t be checked against FAA data." : {
+
+    },
+    "Places" : {
+
+    },
+    "Possible Hold" : {
+
+    },
+    "Powered Lift" : {
+
+    },
+    "Preferred" : {
+
+    },
+    "Press ⌘↩ to mark for correction with this note." : {
+
+    },
+    "Previous Unreviewed" : {
+
+    },
+    "Private" : {
+
+    },
+    "Private strip, Lake Tahoe" : {
+
+    },
+    "Proficiency check (61.58)" : {
+
+    },
+    "Proposed Change" : {
+
+    },
+    "Purser" : {
+
+    },
+    "Questionable" : {
+
+    },
+    "Reading flights…" : {
+
+    },
+    "Reason" : {
+
+    },
+    "Reasons and notes aren’t recorded for several findings at once." : {
+
+    },
+    "Recommendation" : {
+
+    },
+    "Record ^[%lld Package](inflect: true)" : {
+
+    },
+    "Record the import packages" : {
+
+    },
+    "Recorded" : {
+
+    },
+    "Recorded %@ — not sent to LogTen" : {
+
+    },
+    "Recording didn’t change the logbook, so they’re still approved. Applying sends them to LogTen now." : {
+
+    },
+    "Recording doesn’t change the logbook, so they’re still approved. Applying records new packages for them." : {
+
+    },
+    "Recording…" : {
+
+    },
+    "Records" : {
+
+    },
+    "Recreational" : {
+
+    },
+    "Reference" : {
+
+    },
+    "Regulation" : {
+
+    },
+    "Regulation: %@" : {
+
+    },
+    "Regulations" : {
+
+    },
+    "Relief" : {
+
+    },
+    "Remove" : {
+
+    },
+    "Remove from Recents" : {
+
+    },
+    "require" : {
+
+    },
+    "Required" : {
+
+    },
+    "Requires a 61.58 proficiency check" : {
+
+    },
+    "Reset Decision" : {
+
+    },
+    "Restore Defaults" : {
+
+    },
+    "Retry" : {
+
+    },
+    "Returns the number of regulatory violations found in the open logbook." : {
+
+    },
+    "Revert" : {
+
+    },
+    "Revert Batch" : {
+
+    },
+    "Revert Batch…" : {
+
+    },
+    "Revert This Batch" : {
+
+    },
+    "Revert this batch?" : {
+
+    },
+    "Reverting batch…" : {
+
+    },
+    "Review" : {
+
+    },
+    "Rotorcraft" : {
+
+    },
+    "Rotorcraft Gyroplane" : {
+
+    },
+    "Rotorcraft Helicopter" : {
+
+    },
+    "Route" : {
+
+    },
+    "Rules" : {
+
+    },
+    "Run an audit to check this logbook." : {
+
+    },
+    "Run Audit" : {
+
+    },
+    "Run Audit: take a fresh snapshot of the logbook and check it again" : {
+
+    },
+    "Safety Pilot" : {
+
+    },
+    "Sample Logbook" : {
+
+    },
+    "Save" : {
+
+    },
+    "Saved ^[%lld trace](inflect: true) from ^[%lld day](inflect: true)." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Saved ^[%1$lld trace](inflect: true) from ^[%2$lld day](inflect: true)."
+          }
+        }
+      }
+    },
+    "Saved in Keychain" : {
+
+    },
+    "Scope" : {
+
+    },
+    "Search" : {
+
+    },
+    "Search Batches" : {
+
+    },
+    "Search Downloaded Database…" : {
+
+    },
+    "Search Findings" : {
+
+    },
+    "Search Flights" : {
+
+    },
+    "Search the FAA’s releasable airmen database by name. The database is large, so downloading and searching it can take several minutes." : {
+
+    },
+    "Searching the airmen database…" : {
+
+    },
+    "Section" : {
+
+    },
+    "Select a finding to see its evidence and decide it." : {
+
+    },
+    "Select a flight to see its violations and details." : {
+
+    },
+    "Select an aircraft to change its settings." : {
+
+    },
+    "Send them to LogTen" : {
+
+    },
+    "Sending needs a disposable test logbook open in LogTen." : {
+
+    },
+    "Set Up…" : {
+
+    },
+    "Severity" : {
+
+    },
+    "Show All Flights" : {
+
+    },
+    "Show Applied History" : {
+
+    },
+    "Show Backups in Finder" : {
+
+    },
+    "Show Data Sources" : {
+
+    },
+    "Show finding IDs" : {
+
+    },
+    "Show findings on flights from the last 90 days, this year or the whole logbook" : {
+
+    },
+    "Show in Finder" : {
+
+    },
+    "Show in Inspector" : {
+
+    },
+    "Show Inspector" : {
+
+    },
+    "Show the rules that couldn’t run and how to check them" : {
+
+    },
+    "SIC" : {
+
+    },
+    "SIC Night" : {
+
+    },
+    "Simulator Category and Class" : {
+
+    },
+    "Simulator Credit" : {
+
+    },
+    "Simulator Type" : {
+
+    },
+    "Smart groups whose definitions don’t match the regulations they track." : {
+
+    },
+    "Sources" : {
+
+    },
+    "Sources Disagree" : {
+
+    },
+    "Speeds" : {
+
+    },
+    "Split tracks at gaps longer than" : {
+
+    },
+    "Sport" : {
+
+    },
+    "Start" : {
+
+    },
+    "Status" : {
+
+    },
+    "Still processing" : {
+
+    },
+    "Stop" : {
+
+    },
+    "Stop After This Batch" : {
+
+    },
+    "Stopped." : {
+
+    },
+    "Student" : {
+
+    },
+    "Suggest from Field Titles" : {
+
+    },
+    "Suggestion" : {
+
+    },
+    "Sync FlySto" : {
+
+    },
+    "Sync FlySto or fetch ADS-B data to compare entries with what the aircraft recorded." : {
+
+    },
+    "Sync FlySto: fetch the FlySto logs added since the last sync" : {
+
+    },
+    "Sync Now" : {
+
+    },
+    "Synced %@ FlySto logs; %@ couldn’t be read." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Synced %1$@ FlySto logs; %2$@ couldn’t be read."
+          }
+        }
+      }
+    },
+    "Synced %@ FlySto logs." : {
+
+    },
+    "Syncing FlySto…" : {
+
+    },
+    "Tach In" : {
+
+    },
+    "Tach Out" : {
+
+    },
+    "Takeoff" : {
+
+    },
+    "Takeoffs" : {
+
+    },
+    "Takeoffs and landings (61.57(a), (b))" : {
+
+    },
+    "Takes a fresh snapshot of the open logbook, checks it against the regulations and audits it. Returns the number of findings left to review." : {
+
+    },
+    "Taking a fresh snapshot…" : {
+
+    },
+    "Taking a snapshot of the logbook…" : {
+
+    },
+    "Test" : {
+
+    },
+    "Testing…" : {
+
+    },
+    "Than" : {
+
+    },
+    "The app copies the logbook’s folder first. To back up in LogTen, choose View ▸ Backups and click +. LogTen’s backups are the supported way to restore, since LogTen syncs changes to your other devices." : {
+
+    },
+    "The audit compared this source’s value with the logbook’s" : {
+
+    },
+    "The audit couldn’t use this source’s value" : {
+
+    },
+    "The category and class a simulator represents, such as ASEL." : {
+
+    },
+    "The crew role naming the examiner." : {
+
+    },
+    "The crew role naming the safety pilot." : {
+
+    },
+    "The evidence confirms it" : {
+
+    },
+    "The evidence is unreliable" : {
+
+    },
+    "The FAA publishes new airport and runway data every 28 days." : {
+
+    },
+    "The flight’s sources disagree with the logbook" : {
+
+    },
+    "The ICAO type designator, when LogTen’s type identifier differs." : {
+
+    },
+    "The logbook changed since the plan was made. %@" : {
+
+    },
+    "The logbook is right" : {
+
+    },
+    "The logbook isn’t a folder on disk." : {
+
+    },
+    "The pilot settings ignore instruction activity." : {
+
+    },
+    "There’s no sample logbook named “%@”." : {
+
+    },
+    "This records the ^[%lld original value](inflect: true), after checking that the flights haven’t changed since." : {
+
+    },
+    "This rule applies only to flight instructors." : {
+
+    },
+    "This rule applies only to pilots with an instrument rating." : {
+
+    },
+    "This rule doesn’t apply to student pilots." : {
+
+    },
+    "This rule is turned off for the logbook." : {
+
+    },
+    "This rule needs these fields mapped in Logbook Settings: %@." : {
+
+    },
+    "This rule reads a custom field that isn’t mapped. Map a field for %@ to check it." : {
+
+    },
+    "This rule reads custom fields that aren’t mapped. Map fields for %@ to check it." : {
+
+    },
+    "This Year" : {
+
+    },
+    "Time" : {
+
+    },
+    "Time Differs" : {
+
+    },
+    "Time Zone Unavailable" : {
+
+    },
+    "Times Agree Within" : {
+
+    },
+    "Timing" : {
+
+    },
+    "To" : {
+
+    },
+    "Tolerances" : {
+
+    },
+    "Total Time" : {
+
+    },
+    "Touch and Go" : {
+
+    },
+    "Traces" : {
+
+    },
+    "Traces come from the adsb.lol archive, under the Open Database License (ODbL)." : {
+
+    },
+    "Track" : {
+
+    },
+    "Track Detection" : {
+
+    },
+    "Troubleshooting" : {
+
+    },
+    "Try Again" : {
+
+    },
+    "Turn it on in the rules settings to check it." : {
+
+    },
+    "Turn off “Ignore instruction activity” to check it." : {
+
+    },
+    "Turn On Rule…" : {
+
+    },
+    "Type" : {
+
+    },
+    "Type Code" : {
+
+    },
+    "Type Rating" : {
+
+    },
+    "Type Ratings" : {
+
+    },
+    "Unknown" : {
+
+    },
+    "Unknown Airport" : {
+
+    },
+    "Unlogged Stop" : {
+
+    },
+    "Unmatched Activity" : {
+
+    },
+    "Unmatched Flight" : {
+
+    },
+    "Unreviewed" : {
+
+    },
+    "Until this is mapped, these rules aren’t checked: %@." : {
+
+    },
+    "Unusable" : {
+
+    },
+    "Up to a month at a time. Each day’s archive is several gigabytes." : {
+
+    },
+    "Update" : {
+
+    },
+    "Update Approach Data" : {
+
+    },
+    "Update NASR Data" : {
+
+    },
+    "Update NASR data automatically" : {
+
+    },
+    "Updating approach data…" : {
+
+    },
+    "Updating NASR data…" : {
+
+    },
+    "Upload Data Logs to FlySto" : {
+
+    },
+    "Upload Data Logs to FlySto…" : {
+
+    },
+    "Upload…" : {
+
+    },
+    "Uploading…" : {
+
+    },
+    "Use Certificates" : {
+
+    },
+    "Used by %@." : {
+
+    },
+    "UTC" : {
+
+    },
+    "Verification" : {
+
+    },
+    "Verification Failed" : {
+
+    },
+    "Verified" : {
+
+    },
+    "Violations" : {
+
+    },
+    "Waiting" : {
+
+    },
+    "Waiting for LogTen…" : {
+
+    },
+    "Warning" : {
+
+    },
+    "When applying fixes" : {
+
+    },
+    "Yes" : {
+
+    }
+  },
+  "version" : "1.0"
+}

@@ -1,0 +1,171 @@
+name: CI
+
+on:
+  push:
+    branches: [main, "release/**"]
+  pull_request:
+    branches: [main, "release/**"]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+env:
+  # macOS enforces code signing to build and launch; the runner has no cert or profile. Ad-hoc sign
+  # instead, and drop the entitlements file (CODE_SIGN_ENTITLEMENTS=) — its keychain access group
+  # would otherwise demand a provisioning profile. The UI tests don't need it: the -UITestFixture
+  # harness opens a synthetic logbook and never touches the keychain. This only affects the
+  # throwaway CI build.
+  SIGNING: >-
+    CODE_SIGN_IDENTITY=-
+    CODE_SIGNING_REQUIRED=NO
+    CODE_SIGNING_ALLOWED=YES
+    CODE_SIGN_STYLE=Manual
+    DEVELOPMENT_TEAM=
+    PROVISIONING_PROFILE_SPECIFIER=
+    CODE_SIGN_ENTITLEMENTS=
+
+jobs:
+  # The logic lives in the LogbookKit package, whose tests need no app host. Those that build a
+  # synthetic LogTen store skip themselves when LogTen isn't installed, as it isn't on a runner.
+  package:
+    name: LogbookKit Tests
+    runs-on: xcode-27
+    timeout-minutes: 45
+    steps:
+      - uses: maxim-lobanov/setup-xcode@ed7a3b1fda3918c0306d1b724322adc0b8cc0a90  # v1.7.0
+        with:
+          xcode-version: "27"
+      - uses: actions/checkout@v7.0.1
+
+      # GRDB and StreamingCSV ship macros, which can fail fingerprint validation on hosted runners;
+      # skipping it lets the build resolve the macro implementations.
+      - name: Enable macros
+        run: defaults write com.apple.dt.Xcode IDESkipMacroFingerprintValidation -bool YES
+
+      - name: Record toolchain version
+        id: toolchain
+        run: echo "xcode=$(xcodebuild -version | tr '\n' '-')" >> "$GITHUB_OUTPUT"
+
+      - name: Cache SwiftPM dependencies
+        uses: actions/cache@v6.1.0
+        with:
+          path: ~/Library/Caches/org.swift.swiftpm
+          key: spm-${{ runner.os }}-${{ hashFiles('**/Package.resolved') }}
+          restore-keys: |
+            spm-${{ runner.os }}-
+
+      # Cloning the dependencies is cheap; compiling them is not, so the build products are cached
+      # too. The key is exact-match — no restore-keys — because objects built against a different
+      # dependency graph or toolchain must never be reused.
+      - name: Cache package build products
+        uses: actions/cache@v6.1.0
+        with:
+          path: Packages/LogbookKit/.build
+          key: build-package-xcode-27-${{ steps.toolchain.outputs.xcode }}-${{ hashFiles('**/Package.resolved') }}
+
+      - name: Run package tests
+        run: swift test --package-path Packages/LogbookKit
+
+  build:
+    name: Build
+    runs-on: xcode-27
+    timeout-minutes: 45
+    steps:
+      - uses: maxim-lobanov/setup-xcode@ed7a3b1fda3918c0306d1b724322adc0b8cc0a90  # v1.7.0
+        with:
+          xcode-version: "27"
+      - uses: actions/checkout@v7.0.1
+
+      - name: Enable macros
+        run: defaults write com.apple.dt.Xcode IDESkipMacroFingerprintValidation -bool YES
+
+      - name: Record toolchain version
+        id: toolchain
+        run: echo "xcode=$(xcodebuild -version | tr '\n' '-')" >> "$GITHUB_OUTPUT"
+
+      - name: Cache SwiftPM dependencies
+        uses: actions/cache@v6.1.0
+        with:
+          path: ~/Library/Caches/org.swift.swiftpm
+          key: spm-${{ runner.os }}-${{ hashFiles('**/Package.resolved') }}
+          restore-keys: |
+            spm-${{ runner.os }}-
+
+      - name: Cache Xcode build products
+        uses: actions/cache@v6.1.0
+        with:
+          path: |
+            ${{ runner.temp }}/dd-build/Build
+            ${{ runner.temp }}/dd-build/SourcePackages
+          key: derived-build-xcode-27-${{ steps.toolchain.outputs.xcode }}-${{ hashFiles('**/Package.resolved') }}
+
+      - name: Build the app
+        run: |
+          set -o pipefail
+          xcodebuild build \
+            -project "LogTen Assistant.xcodeproj" \
+            -scheme "LogTen Assistant" \
+            -destination 'platform=macOS,arch=arm64' \
+            -derivedDataPath "$RUNNER_TEMP/dd-build" \
+            CODE_SIGNING_ALLOWED=NO \
+            | xcbeautify --renderer github-actions
+
+  ui:
+    name: UI Tests
+    runs-on: xcode-27
+    timeout-minutes: 90
+    steps:
+      - uses: maxim-lobanov/setup-xcode@ed7a3b1fda3918c0306d1b724322adc0b8cc0a90  # v1.7.0
+        with:
+          xcode-version: "27"
+      - uses: actions/checkout@v7.0.1
+
+      - name: Enable macros
+        run: defaults write com.apple.dt.Xcode IDESkipMacroFingerprintValidation -bool YES
+
+      - name: Record toolchain version
+        id: toolchain
+        run: echo "xcode=$(xcodebuild -version | tr '\n' '-')" >> "$GITHUB_OUTPUT"
+
+      - name: Cache SwiftPM dependencies
+        uses: actions/cache@v6.1.0
+        with:
+          path: ~/Library/Caches/org.swift.swiftpm
+          key: spm-${{ runner.os }}-${{ hashFiles('**/Package.resolved') }}
+          restore-keys: |
+            spm-${{ runner.os }}-
+
+      - name: Cache Xcode build products
+        uses: actions/cache@v6.1.0
+        with:
+          path: |
+            ${{ runner.temp }}/dd-ui/Build
+            ${{ runner.temp }}/dd-ui/SourcePackages
+          key: derived-ui-xcode-27-${{ steps.toolchain.outputs.xcode }}-${{ hashFiles('**/Package.resolved') }}
+
+      # TEST_RUNNER_XCUITEST_TIMEOUT_MULTIPLIER stretches XCUITestKit's waits so the slower CI
+      # hardware doesn't trip element lookups that pass locally. The waits are read by the test
+      # code, which runs in the runner process rather than in xcodebuild's, and only the
+      # TEST_RUNNER_ prefix reaches it — xcodebuild forwards those with the prefix stripped.
+      - name: Run UI tests
+        env:
+          TEST_RUNNER_XCUITEST_TIMEOUT_MULTIPLIER: "3"
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -project "LogTen Assistant.xcodeproj" \
+            -scheme "LogTen Assistant" \
+            -destination 'platform=macOS,arch=arm64' \
+            -derivedDataPath "$RUNNER_TEMP/dd-ui" \
+            -resultBundlePath "TestResults-UI.xcresult" \
+            ${{ env.SIGNING }} \
+            | xcbeautify --renderer github-actions
+
+      - name: Upload test results
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: test-results-ui
+          path: TestResults-UI.xcresult
+          if-no-files-found: ignore

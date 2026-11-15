@@ -1,0 +1,8 @@
+# Names the Sentry organization and project that debug symbols are uploaded to, read by the
+# release lanes.
+#
+# Deliberately no [auth] section: the token is a secret and reaches sentry-cli through
+# SENTRY_AUTH_TOKEN — a GitHub Actions secret on CI, and fastlane/.env locally. Never add one here.
+[defaults]
+org=timcodes
+project=logten-assistant

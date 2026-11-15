@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LogTen Assistant — audit your LogTen logbook on the Mac</title>
+    <meta name="description" content="LogTen Assistant audits a LogTen Pro pilot logbook against itself, your smart groups, and what the aircraft recorded, then applies approved fixes with a backup and verification." />
+    <link rel="canonical" href="https://riscfuture.github.io/LogTen-Assistant/" />
+    <meta name="author" content="Tim Morgan" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#f6f1e4" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0d1626" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="assets/icon.png" />
+    <link rel="apple-touch-icon" href="assets/icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="LogTen Assistant" />
+    <meta property="og:url" content="https://riscfuture.github.io/LogTen-Assistant/" />
+    <meta property="og:title" content="LogTen Assistant — audit your LogTen logbook on the Mac" />
+    <meta property="og:description" content="LogTen Assistant audits a LogTen Pro pilot logbook against itself, your smart groups, and what the aircraft recorded, then applies approved fixes with a backup and verification." />
+    <meta property="og:image" content="https://riscfuture.github.io/LogTen-Assistant/assets/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="LogTen Assistant — audit your LogTen logbook on the Mac" />
+    <meta name="twitter:description" content="LogTen Assistant audits a LogTen Pro pilot logbook against itself, your smart groups, and what the aircraft recorded, then applies approved fixes with a backup and verification." />
+    <meta name="twitter:image" content="https://riscfuture.github.io/LogTen-Assistant/assets/og.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "LogTen Assistant",
+        "url": "https://riscfuture.github.io/LogTen-Assistant/",
+        "description": "A Mac app that audits a LogTen Pro pilot logbook against itself, its smart groups, and what the aircraft recorded, then applies approved fixes safely.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "macOS 27 or later",
+        "softwareRequirements": "macOS 27 or later; LogTen Pro installed",
+        "author": { "@type": "Person", "name": "Tim Morgan", "url": "https://github.com/RISCfuture" },
+        "downloadUrl": "https://github.com/RISCfuture/LogTen-Assistant/releases/latest"
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="wordmark" href="./">
+          <img src="assets/icon.png" width="28" height="28" alt="" />
+          <span>LogTen Assistant</span>
+        </a>
+        <nav class="site-nav" aria-label="Sections">
+          <a href="index.html#workflows">Workflows</a>
+          <a href="index.html#safety">Safety</a>
+          <a href="index.html#sources">Data sources</a>
+          <a href="index.html#download">Download</a>
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy</a>
+        </nav>
+        <a class="btn btn-primary btn-sm" href="https://github.com/RISCfuture/LogTen-Assistant/releases/latest">Download</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div>
+            <p class="tag">For LogTen Pro on the Mac</p>
+            <h1>Check your logbook against the evidence.</h1>
+            <p class="lede">
+              LogTen Assistant audits a LogTen logbook for entries that disagree with each other, with
+              your smart groups, and with what the aircraft recorded. Approve the fixes you trust and it
+              applies them with a backup, a one-flight pilot batch, and verification.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="https://github.com/RISCfuture/LogTen-Assistant/releases/latest">Download the latest release</a>
+              <a class="btn" href="https://github.com/RISCfuture/LogTen-Assistant">View source</a>
+            </div>
+            <code class="brew">brew install --cask riscfuture/tap/logten-assistant</code>
+            <p class="fine">Requires macOS 27 and LogTen Pro.</p>
+          </div>
+          <div class="sheet" role="img" aria-label="An example audit: three logbook entries, one flagged for a time that differs from the aircraft's recorded flight.">
+            <table>
+              <caption>Aircraft comparisons · 3 entries</caption>
+              <thead><tr><th>Date</th><th>Route</th><th class="num">Logged</th><th class="num">Recorded</th></tr></thead>
+              <tbody>
+                <tr><td>2026-03-04</td><td>KSJC–KMRY</td><td class="num">0:38</td><td class="num">0:38</td></tr>
+                <tr><td>2026-03-09</td><td>KMRY–KSQL</td><td class="num flag">1:10</td><td class="num flag">0:52</td></tr>
+                <tr><td>2026-03-15</td><td>KSQL–KSJC</td><td class="num">0:27</td><td class="num">0:27</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="band band-ruled" id="workflows">
+        <div class="wrap">
+          <p class="tag">Two workflows</p>
+          <h2>Fix what is wrong. Report what is risky.</h2>
+          <div class="grid-2">
+            <div class="card">
+              <h3>Audit &amp; Fix</h3>
+              <p>
+                Compares entries with each other, with the logbook’s smart groups, and with FlySto and
+                ADS-B evidence for the aircraft. You review the findings, approve the fixes, back up,
+                and apply them through LogTen’s own import. Every batch is then verified.
+              </p>
+              <ul>
+                <li>Logbook consistency: times, counts, duplicates, crew, simulators, airports</li>
+                <li>Aircraft comparisons: times, night, landings, approaches, airports</li>
+                <li>Unmatched activity: flights the logbook never recorded</li>
+                <li>Groups &amp; currency: smart groups that don’t match the regulations</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Violations</h3>
+              <p>
+                Lists the flights that break the pilot-currency rules of 14 CFR part 61: flight
+                review, passenger and night passenger currency, IFR currency, proficiency checks, NVG,
+                instruction limits and SIC currency. It only reports. Nothing is corrected.
+              </p>
+              <p>
+                Each rule says what it can’t see, and when a rule can’t run, it tells you which setting
+                lets it.
+              </p>
+            </div>
+          </div>
+          <figure class="shot" style="margin-top: 2rem">
+            <img
+              src="assets/screenshots/audit.webp"
+              width="1600"
+              height="1000"
+              alt="The Audit &amp; Fix window: a Seat Time discrepancy selected, with its explanation, proposed correction and flight details in the inspector."
+            />
+            <figcaption>The review queue and its inspector.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="band" id="safety">
+        <div class="wrap">
+          <p class="tag">The safety model</p>
+          <h2>Your logbook is not the app’s to change on a whim.</h2>
+          <p class="lede">
+            The app is sandboxed, and applying is deliberately hard to do by accident.
+          </p>
+          <ol class="steps">
+            <li><strong>It reads a copy.</strong> The live store is never opened. The app reads snapshots of the logbook, checked for integrity.</li>
+            <li><strong>Preflight.</strong> Fixes are checked against a fresh snapshot. Locked or signed entries, and entries that changed since the audit, are left out and listed.</li>
+            <li><strong>Backup.</strong> Applying needs a fresh copy of the logbook folder, with SHA-256 hashes, and your confirmation that you backed up in LogTen too.</li>
+            <li><strong>Pilot batch.</strong> A one-flight batch goes first, so a problem shows before the rest are sent.</li>
+            <li><strong>Verification and revert.</strong> Each batch is verified against a new snapshot and journaled with a compensating batch, so Revert Batch can undo it.</li>
+            <li><strong>Recording by default.</strong> Import packages are written to disk, not sent to LogTen, until you turn sending on and declare that a disposable logbook is open.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="band band-ruled" id="sources">
+        <div class="wrap">
+          <p class="tag">Data sources</p>
+          <h2>Evidence from the aircraft.</h2>
+          <div class="grid-3">
+            <div class="card">
+              <h3>FlySto</h3>
+              <p>Sync with an API token, or import a FlySto CSV export. You can also upload avionics data logs for FlySto to parse.</p>
+            </div>
+            <div class="card">
+              <h3>ADS-B</h3>
+              <p>Streams adsb.lol’s daily archives and keeps only your aircraft’s traces, under the Open Database License.</p>
+            </div>
+            <div class="card">
+              <h3>FAA data</h3>
+              <p>Downloads the current NASR airport cycle and CIFP approaches, for airports, time zones, night and approach names.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="download">
+        <div class="wrap">
+          <p class="tag">Download</p>
+          <h2>Get LogTen Assistant.</h2>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://github.com/RISCfuture/LogTen-Assistant/releases/latest">Download from GitHub</a>
+          </div>
+          <p>Or install with Homebrew:</p>
+          <code class="brew">brew install --cask riscfuture/tap/logten-assistant</code>
+          <p class="fine">
+            Requires macOS 27, and LogTen Pro installed in /Applications for the data model the
+            reader uses. See <a href="privacy.html">Privacy</a> for exactly what the app contacts, and
+            <a href="support.html">Support</a> if something goes wrong.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p class="footer-links">
+          <a href="./">Home</a>
+          <a href="https://github.com/RISCfuture/LogTen-Assistant/releases/latest">Download</a>
+          <a href="https://github.com/RISCfuture/LogTen-Assistant">Source</a>
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy</a>
+        </p>
+        <p class="disclaimer">Not affiliated with Coradine Aviation Systems; LogTen is a trademark of Coradine.</p>
+        <p class="fine">© 2026 Tim Morgan</p>
+      </div>
+    </footer>
+  </body>
+</html>

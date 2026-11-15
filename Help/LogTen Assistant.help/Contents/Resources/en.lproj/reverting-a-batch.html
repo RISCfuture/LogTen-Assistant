@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Revert an applied batch</title>
+  <meta name="AppleTitle" content="Revert an applied batch">
+  <meta name="description" content="Undo a batch of applied fixes from Applied History with Revert Batch.">
+  <meta name="keywords" content="revert, undo, applied history, batch, compensating, journal, verification">
+  <meta name="robots" content="index, anchor">
+  <link rel="stylesheet" href="logten-assistant-help.css">
+</head>
+<body>
+<a name="reverting-a-batch" id="reverting-a-batch"></a>
+<figure class="topicIcon"><img src="../help-icon.png" alt="" width="30" height="30"></figure>
+<h1>Revert an applied batch</h1>
+
+<p>If a batch turns out to be wrong, you can undo it. <strong>Applied History</strong> keeps a
+journal of every batch the app delivered, with the changes it made, its verification result, and the
+import package that carried it.</p>
+
+<h2>Revert a batch</h2>
+
+<ol>
+  <li>Open <strong>Applied History</strong> in the sidebar and select the batch.</li>
+  <li>Click <strong>Revert Batch…</strong> in the inspector, or choose <strong>Apply</strong> &#9656;
+    <strong>Revert Batch…</strong>.</li>
+  <li>Confirm. The app delivers a <em>compensating batch</em> — one that sets each changed field back
+    to the value it had — and journals it like any other.</li>
+</ol>
+
+<p><strong>Revert Batch…</strong> is available only for a batch that was verified and hasn’t been
+reverted already. A batch that was only <em>recorded</em> never reached LogTen, so there is nothing to
+revert.</p>
+
+<p class="note">A revert goes through LogTen’s import like the original, and LogTen asks you to
+confirm it. If you’ve since changed the same fields by hand, check the result in LogTen.</p>
+
+<div class="seealso">
+  <h2>See also</h2>
+  <ul>
+    <li><a href="applying-fixes.html">Apply fixes to your logbook</a></li>
+  </ul>
+</div>
+
+</body>
+</html>

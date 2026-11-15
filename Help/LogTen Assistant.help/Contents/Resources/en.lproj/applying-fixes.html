@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Apply fixes to your logbook</title>
+  <meta name="AppleTitle" content="Apply fixes to your logbook">
+  <meta name="description" content="Back up the logbook, apply approved fixes through LogTen's import in verified batches, or record them without sending.">
+  <meta name="keywords" content="apply, fixes, backup, preflight, pilot batch, verification, record, send to logten, import, approved, hand">
+  <meta name="robots" content="index, anchor">
+  <link rel="stylesheet" href="logten-assistant-help.css">
+</head>
+<body>
+<a name="applying-fixes" id="applying-fixes"></a>
+<figure class="topicIcon"><img src="../help-icon.png" alt="" width="30" height="30"></figure>
+<h1>Apply fixes to your logbook</h1>
+
+<p>Applying is deliberately hard to do by accident. Approved fixes go through five safeguards before
+a single field changes.</p>
+
+<h2>Start from Approved</h2>
+
+<p>The <strong>Approved</strong> page lists every fix you marked for correction. When you’re ready,
+choose <strong>Apply</strong> &#9656; <strong>Apply Fixes…</strong> (<kbd>&#8679;&#8984;A</kbd>), or click
+<strong>Apply Fixes…</strong> in the toolbar. The command is dimmed until at least one fix is
+approved.</p>
+
+<h2>1. Preflight</h2>
+
+<p>The sheet first takes a fresh snapshot and checks each fix against it. It shows what will change,
+and sets aside anything it can’t safely apply:</p>
+
+<ul>
+  <li><strong>Can’t Be Imported</strong> lists fixes left out — a flight that’s locked or signed,
+    has no flight key, or changed since the audit. The reason is printed beneath each.</li>
+  <li><strong>Change by Hand</strong> lists changes LogTen’s import can’t make, with the old and new
+    value and a <strong>Copy New Value</strong> button, so you can make them in LogTen.</li>
+</ul>
+
+<p>Only a short list of fields has been validated against LogTen’s import. Corrections never touch
+anything else.</p>
+
+<h2>2. Back up</h2>
+
+<p>Applying requires a backup. Click <strong>Back Up Logbook</strong> in the sheet (or choose
+<strong>Apply</strong> &#9656; <strong>Back Up Logbook</strong> ahead of time) and the app copies the
+whole logbook folder, with a manifest of SHA-256 hashes. Backups are listed under
+<strong>Apply</strong> &#9656; <strong>Show Backups in Finder</strong>.</p>
+
+<p>You must also tick <strong>I made a backup in LogTen’s Backups view</strong>. In LogTen, choose
+<strong>View</strong> &#9656; <strong>Backups</strong> and click <strong>+</strong>. LogTen’s own
+backups are the supported way to restore, because LogTen syncs changes to your other devices.</p>
+
+<h2>3. The pilot batch</h2>
+
+<p>Fixes go out in batches. The first batch is a single flight, so a problem shows up before the
+rest are sent. Each row in the <strong>Apply</strong> section shows where its batch stands. Click
+<strong>Stop After This Batch</strong> to stop; batches not yet applied stay approved.</p>
+
+<h2>4. Verification</h2>
+
+<p>After each batch the app takes a new snapshot and compares it with what the batch should have done.
+A batch is <strong>Verified</strong> when every change appears in the logbook and nothing else changed,
+or marked <strong>Verification Failed</strong> if not. Open <strong>Applied History</strong> for the
+result.</p>
+
+<h2>5. Revert Batch</h2>
+
+<p>Every delivered batch is journaled with a compensating batch that undoes it. See
+<a href="reverting-a-batch.html">Revert an applied batch</a>.</p>
+
+<h2>Record or send</h2>
+
+<p>By default the app <strong>records</strong> its import packages: it writes them to the logbook’s
+workspace folder for you to inspect, and does <em>not</em> send anything to LogTen. The sheet’s
+button reads <strong>Record</strong> and a count of packages instead of <strong>Apply</strong>, and approved fixes stay approved, so nothing
+is lost by trying it.</p>
+
+<p>Sending to LogTen is switched off until you opt in on two counts, because LogTen’s import has been
+validated only against a disposable logbook:</p>
+
+<ul>
+  <li>Choose <strong>Settings</strong> &#9656; <strong>Advanced</strong> and set <strong>When applying
+    fixes</strong> to <strong>Send them to LogTen</strong>.</li>
+  <li>Declare that LogTen has a disposable logbook open. The option stays unavailable until you do;
+    see <a href="app-settings.html">Change the app’s settings</a>.</li>
+</ul>
+
+<p>Once sending is on, LogTen asks you to confirm each import, and <kbd>&#8984;Z</kbd> cannot undo
+it. The built-in sample logbook always records.</p>
+
+<p class="note">An automated audit can be wrong. Look at every fix in the sheet before you apply it.</p>
+
+<div class="seealso">
+  <h2>See also</h2>
+  <ul>
+    <li><a href="reverting-a-batch.html">Revert an applied batch</a></li>
+    <li><a href="reviewing-findings.html">Review findings and make decisions</a></li>
+    <li><a href="snapshots.html">Why the app reads a copy of your logbook</a></li>
+  </ul>
+</div>
+
+</body>
+</html>

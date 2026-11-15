@@ -1,0 +1,384 @@
+# frozen_string_literal: true
+
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+require "fileutils"
+require "json"
+require "open3"
+require "plist"
+require "shellwords"
+require "tmpdir"
+
+default_platform :mac
+
+XCODEPROJ = "LogTen Assistant.xcodeproj"
+
+# `sh` runs its command from the fastlane directory, so anything touching the working tree is built
+# from here.
+REPO_ROOT = File.expand_path("..", __dir__)
+
+# Where the archive, the exported app, and the disk image land, so a CI run can collect them as
+# artifacts.
+OUTPUT_PATH = File.join(REPO_ROOT, "build")
+
+# The one build of the app, which is signed with Developer ID, notarized, and attached to a GitHub
+# release. The reusable release workflow names it "download" in its platform matrix, and
+# `ci_release` reads that name as the edition to build.
+EDITION = "download"
+SCHEME = "LogTen Assistant"
+APP_IDENTIFIER = "codes.tim.LogTenAssistant"
+MATCH_TYPE = "developer_id"
+
+# Which Sentry organization and project a release uploads its debug symbols to, read from the
+# committed .sentryclirc. sentry-cli would read that file itself, but only from its working
+# directory, which for `sh` is not the repository root — so the values go on the command line.
+def sentry_defaults
+  File.read(File.join(REPO_ROOT, ".sentryclirc")).scan(/^\s*(org|project)\s*=\s*(\S+)\s*$/).to_h
+rescue Errno::ENOENT
+  {}
+end
+
+# The MARKETING_VERSION the app and its test bundle carry, which is the version a release ships: the
+# release lanes stamp only the build number.
+#
+# Read from the project file's text rather than from `xcodebuild -showBuildSettings`, because
+# `ci_verify_release` runs on a Linux runner that has no Xcode. The project uses Xcode's JSON project
+# format, which neither the xcodeproj gem nor strict JSON parsers can read.
+def project_marketing_version
+  project = File.read(File.join(REPO_ROOT, XCODEPROJ, "project.xcproj"))
+  versions = project.scan(/"MARKETING_VERSION"\s*:\s*"([^"]+)"/).flatten.uniq
+  UI.user_error!("#{XCODEPROJ} sets no MARKETING_VERSION.") if versions.empty?
+  return versions.first if versions.one?
+
+  UI.user_error!("The targets' build configurations disagree on MARKETING_VERSION: " \
+                 "#{versions.join(", ")}.")
+end
+
+# The CFBundleShortVersionString an exported app carries, which the disk image is named after.
+def exported_app_version(app)
+  plist = File.join(app, "Contents", "Info.plist")
+  version = `/usr/libexec/PlistBuddy -c "Print :CFBundleShortVersionString" #{plist.shellescape}`.strip
+  UI.user_error!("#{app} carries no CFBundleShortVersionString.") if version.empty?
+  version
+end
+
+# The build number to ship next: the current UTC minute as YYYYMMDDHHMM. It rises with every
+# release and needs no store to ask, since the app is not distributed through one.
+def timestamp_build_number
+  Time.now.utc.strftime("%Y%m%d%H%M")
+end
+
+# Runs git in the repository and returns its output, failing the lane with git's own message.
+def git(*args)
+  output, status = Open3.capture2e("git", "-C", REPO_ROOT, *args)
+  UI.user_error!("git #{args.join(" ")} failed: #{output.strip}") unless status.success?
+  output
+end
+
+# The branches a release is cut from: main, or release/X.Y for a hotfix.
+RELEASE_BRANCH_REFSPECS = %w[
+  +refs/heads/main:refs/remotes/origin/main
+  +refs/heads/release/*:refs/remotes/origin/release/*
+].freeze
+
+# The first of those branches that contains HEAD, the commit being released, or nil. They are
+# fetched first, because a CI checkout holds the tagged commit and nothing else.
+def release_branch_containing_head
+  git("fetch", "--quiet", "--no-tags", "origin", *RELEASE_BRANCH_REFSPECS)
+  branches = git("for-each-ref", "--format=%(refname:short)",
+                 "refs/remotes/origin/main", "refs/remotes/origin/release").lines.map(&:strip)
+  branches.find do |branch|
+    system("git", "-C", REPO_ROOT, "merge-base", "--is-ancestor", "HEAD", branch)
+  end
+end
+
+# Signing credentials live in a private repository, everything in it encrypted under one
+# MATCH_PASSWORD: the signing certificates (managed by _match_) and the App Store Connect API key
+# (decrypted by that repository's own `bin/api-key`). Neither is ever written to this working tree.
+# CI checks the repository out and sets CERTIFICATES_REPO; a local run falls back to a clone
+# alongside the other repositories.
+DEFAULT_CERTIFICATES_REPO = File.expand_path("~/Repositories/certificates")
+
+def certificates_repo
+  path = ENV.fetch("CERTIFICATES_REPO", DEFAULT_CERTIFICATES_REPO)
+  return path if Dir.exist?(path)
+
+  UI.user_error!("No signing credentials at #{path} — clone the certificates repository there, " \
+                 "or point CERTIFICATES_REPO at an existing checkout.")
+end
+
+# The Developer ID Application identity _match_ installed, read back from the keychain rather than
+# written out here, so renewing the certificate never means editing this file. Backticks rather than
+# `sh` because this runs while building an argument list, and the listing is noise in the log.
+def developer_id_identity
+  identity = `security find-identity -v -p codesigning`[/"(Developer ID Application:[^"]+)"/, 1]
+  if identity.nil?
+    UI.user_error!("No Developer ID Application identity in the keychain — ensure_signing has to " \
+                   "run before anything can be signed with it.")
+  end
+  identity
+end
+
+# The xcodebuild flags that let `-allowProvisioningUpdates` authenticate with the App Store Connect
+# API key, so automatic signing can fetch a profile on a machine with no Xcode account. They want a
+# path, so the key is written to a private temp file that goes away when the process exits — it
+# never lands in the working tree.
+def provisioning_authentication_args
+  key = Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::APP_STORE_CONNECT_API_KEY]
+  UI.user_error!("ensure_api_key has to run before an archive can be signed.") if key.nil?
+
+  directory = Dir.mktmpdir("asc-api-key")
+  at_exit { FileUtils.remove_entry(directory, true) }
+  path = File.join(directory, "AuthKey_#{key[:key_id]}.p8")
+  File.write(path, key[:key])
+  FileUtils.chmod(0o600, path)
+
+  ["-authenticationKeyPath", path,
+   "-authenticationKeyID", key[:key_id],
+   "-authenticationKeyIssuerID", key[:issuer_id]]
+end
+
+# The export options for a Developer ID build, signed with the profile match installed for the app.
+def developer_id_export_options
+  mapping = Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::MATCH_PROVISIONING_PROFILE_MAPPING]
+  profile = mapping&.fetch(APP_IDENTIFIER, nil)
+  UI.user_error!("match installed no profile for #{APP_IDENTIFIER}.") if profile.nil?
+
+  { "method"               => "developer-id",
+    "teamID"               => CredentialsManager::AppfileConfig.try_fetch_value(:team_id),
+    "signingStyle"         => "manual",
+    "signingCertificate"   => "Developer ID Application",
+    "provisioningProfiles" => { APP_IDENTIFIER => profile } }
+end
+
+# One version's release notes as Markdown, the form a GitHub release carries.
+#
+# Not fastlane's `sh`, which reports a failure by printing the Ruby line that called it — a missing
+# changelog section would arrive on CI as a source excerpt rather than as the sentence the script
+# wrote explaining what to add. Capturing lets the script's own message be the error.
+def release_notes(version)
+  script = File.join(REPO_ROOT, "Scripts", "release-notes.sh")
+  output, status = Open3.capture2e(script, version)
+  UI.user_error!(output.strip) unless status.success?
+  output.strip
+end
+
+platform :mac do
+  desc "Build, notarize, and package the app as a disk image"
+  lane :download_release do |options|
+    archive_edition(build: options.fetch(:build) { timestamp_build_number })
+    notarize_and_package
+    upload_debug_symbols
+  end
+
+  desc "Resolve the next build number and write it where CI can read it"
+  lane :ci_next_build_number do
+    next_build_number = timestamp_build_number
+    UI.success("Next build number: #{next_build_number}")
+
+    # Only CI needs the value in a file to hand to the next job; a local run just wants to see it.
+    build_number_file = ENV.fetch("BUILD_NUMBER_FILE", nil)
+    File.write(build_number_file, next_build_number) if build_number_file
+  end
+
+  desc "Refuse to start a release that names the wrong version, sits off main, or lacks notes (CI)"
+  lane :ci_verify_release do |options|
+    version = options.fetch(:version)
+
+    # The project is the version source: a release builds the MARKETING_VERSION it carries, and the
+    # tag only has to agree with it.
+    marketing_version = project_marketing_version
+    unless marketing_version == version
+      UI.user_error!("The release is #{version}, but the project's MARKETING_VERSION is " \
+                     "#{marketing_version}. Advance MARKETING_VERSION in a release commit and tag " \
+                     "that commit.")
+    end
+
+    branch = release_branch_containing_head
+    if branch.nil?
+      UI.user_error!("#{git("rev-parse", "--short", "HEAD").strip} is on neither main nor a " \
+                     "release/* branch, so #{version} would ship a commit no branch keeps.")
+    end
+    UI.success("#{version} matches MARKETING_VERSION and is on #{branch}.")
+
+    notes = release_notes(version)
+    UI.user_error!("CHANGELOG.md's #{version} section is empty.") if notes.empty?
+    UI.success("#{version} has #{notes.length} characters of release notes.")
+  end
+
+  desc "Archive the app and ship it (CI)"
+  lane :ci_release do |options|
+    name = options.fetch(:platform)
+    UI.user_error!("Unknown edition #{name.inspect}. This app ships #{EDITION}.") unless name == EDITION
+
+    archive_edition(build: options.fetch(:build))
+    notarize_and_package
+    upload_debug_symbols
+  end
+
+  # Archives the app under the given build number and exports it for Developer ID.
+  #
+  # xcodebuild is driven directly rather than through build_app: gym opens the project with the
+  # xcodeproj gem, which cannot read Xcode's JSON project format.
+  private_lane :archive_edition do |options|
+    setup_ci # No-op off CI; elsewhere it keeps match out of the login keychain.
+    ensure_signing
+
+    FileUtils.rm_rf(OUTPUT_PATH)
+    FileUtils.mkdir_p(OUTPUT_PATH)
+    archive = File.join(OUTPUT_PATH, "#{SCHEME}.xcarchive")
+
+    # The marketing version is the project's own, which `ci_verify_release` has matched to the tag.
+    # The build number goes on the command line rather than into the project, so a release leaves no
+    # commit behind and every target in the archive carries the same number.
+    #
+    # The archive signs automatically, exactly as it does in Xcode: `-allowProvisioningUpdates` plus
+    # the API key lets it resolve a profile, and the certificate comes from the certificates
+    # repository. The export cannot do the same — cloud signing is refused for distribution — so it
+    # signs manually with the profile match installed.
+    sh("xcodebuild", "archive",
+       "-project", File.join(REPO_ROOT, XCODEPROJ),
+       "-scheme", SCHEME,
+       "-configuration", "Release",
+       "-destination", "generic/platform=macOS",
+       "-archivePath", archive,
+       "-allowProvisioningUpdates", *provisioning_authentication_args,
+       "-quiet",
+       "CURRENT_PROJECT_VERSION=#{options.fetch(:build)}")
+    lane_context[SharedValues::XCODEBUILD_ARCHIVE] = archive
+
+    Dir.mktmpdir("export-options") do |directory|
+      options_plist = File.join(directory, "ExportOptions.plist")
+      File.write(options_plist, developer_id_export_options.to_plist)
+      sh("xcodebuild", "-exportArchive",
+         "-archivePath", archive,
+         "-exportPath", OUTPUT_PATH,
+         "-exportOptionsPlist", options_plist,
+         "-quiet")
+    end
+  end
+
+  # Notarizes the exported app and wraps it in the disk image the GitHub release ships — which is
+  # also what the in-app update checker downloads, since it looks for a .dmg asset first.
+  private_lane :notarize_and_package do
+    app_path = Dir[File.join(OUTPUT_PATH, "*.app")].first
+    UI.user_error!("The export produced no .app in #{OUTPUT_PATH}.") if app_path.nil?
+
+    # `notarize` staples the ticket onto the app once Apple accepts it, so the copy that goes into
+    # the disk image validates offline. No bundle identifier is passed: `notarytool` reads it from
+    # the package.
+    notarize(package:   app_path,
+             api_key:   lane_context[SharedValues::APP_STORE_CONNECT_API_KEY],
+             print_log: true)
+
+    version = exported_app_version(app_path)
+    # make-dmg.sh prints the image's path last; `sh` folds hdiutil's stderr in ahead of it.
+    dmg = sh(File.join(REPO_ROOT, "Scripts", "make-dmg.sh"), app_path, version, OUTPUT_PATH)
+          .lines.last.strip
+
+    # The disk image needs notarizing in its own right. It reaches users as a browser download, so
+    # it arrives carrying a quarantine flag, and Gatekeeper judges the image at the moment it is
+    # opened — before anyone reaches the app inside. An unsigned image fails that check and is
+    # refused as unverified, however impeccably the app within it is signed. Notarizing the app is
+    # still what lets it run once dragged out; these are two separate gates.
+    sh("codesign", "--force", "--timestamp", "--sign", developer_id_identity, dmg)
+    notarize(package:   dmg,
+             api_key:   lane_context[SharedValues::APP_STORE_CONNECT_API_KEY],
+             print_log: true)
+    UI.success("Packaged #{dmg}")
+  end
+
+  # Loads the App Store Connect API key, which notarization and match both use. `--stdout` keeps the
+  # decrypted key in memory rather than leaving a plaintext .p8 in the working tree, and `log: false`
+  # stops fastlane echoing it into the build log.
+  private_lane :ensure_api_key do
+    if ENV["MATCH_PASSWORD"].to_s.empty?
+      UI.user_error!("MATCH_PASSWORD is not set. Put it in fastlane/.env (git-ignored, loaded " \
+                     "automatically; see fastlane/.env.example) or export it before this lane.")
+    end
+
+    key = JSON.parse(sh(File.join(certificates_repo, "bin", "api-key"), "--stdout", log: false))
+    app_store_connect_api_key(
+      key_id:      key["key_id"],
+      issuer_id:   key["issuer_id"],
+      key_content: key["key"]
+    )
+  end
+
+  # Everything an archive needs to be signed and accepted.
+  #
+  # Two certificates, because an archive and its export sign differently: `xcodebuild archive` uses a
+  # development identity, just as Xcode does locally, and `exportArchive` re-signs the payload with
+  # Developer ID. Keeping the development certificate here means a runner installs it instead of
+  # minting a throwaway one every release — a team holds only a few, and automatic signing will
+  # exhaust the quota.
+  #
+  # Skipping profiles on that first call means the archive gets its profile from
+  # `-allowProvisioningUpdates`, and the certificate is all match is being asked for. It must come
+  # first, because match records a profile mapping whether or not it synced any — the development
+  # call maps the bundle identifier to nil, so the Developer ID call has to be the one that wins.
+  private_lane :ensure_signing do
+    ensure_api_key
+    match(type:                       "development",
+          app_identifier:             APP_IDENTIFIER,
+          readonly:                   true,
+          skip_provisioning_profiles: true)
+    match(type:           MATCH_TYPE,
+          platform:       "macos",
+          app_identifier: APP_IDENTIFIER,
+          readonly:       true)
+  end
+
+  # Uploads dSYMs and source context so Sentry can symbolicate the build that was just shipped.
+  #
+  # The archive's dSYMs directory holds every dSYM the build produced: the app and its embedded
+  # frameworks.
+  #
+  # `sentry-cli` is invoked directly rather than through an action: the built-in
+  # `upload_symbols_to_sentry` is deprecated to a hard error, and Sentry's replacement plugin is not
+  # installed.
+  private_lane :upload_debug_symbols do
+    dsym_path = File.join(lane_context[SharedValues::XCODEBUILD_ARCHIVE].to_s, "dSYMs")
+    unless Dir.exist?(dsym_path)
+      UI.important("The archive carries no dSYMs, so there is nothing to symbolicate.")
+      next
+    end
+
+    # By the time this runs the binary is already shipped, so nothing here is allowed to fail the
+    # release — a missing token or a rejected upload costs symbolication, not the build, and
+    # `sentry-cli debug-files upload` can be re-run by hand afterwards.
+    token = ENV.fetch("SENTRY_AUTH_TOKEN", nil)
+    if token.nil? || token.empty?
+      UI.important("SENTRY_AUTH_TOKEN is not set; skipping the Sentry upload of #{dsym_path}.")
+      next
+    end
+
+    org, project = sentry_defaults.values_at("org", "project")
+    if org.nil? || project.nil?
+      UI.important("No .sentryclirc naming an organization and project; skipping the Sentry " \
+                   "upload of #{dsym_path}.")
+      next
+    end
+
+    begin
+      sh("sentry-cli", "debug-files", "upload",
+         "--org", org,
+         "--project", project,
+         "--include-sources",
+         dsym_path)
+    rescue StandardError => error
+      UI.error("Sentry rejected the dSYM upload: #{error.message}")
+      UI.important("The build itself uploaded fine; re-run sentry-cli once the token is valid.")
+    end
+  end
+end

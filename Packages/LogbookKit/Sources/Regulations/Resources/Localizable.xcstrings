@@ -1,0 +1,293 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Acted as pilot in command under IFR after instrument currency lapsed more than 6 calendar months earlier; an instrument proficiency check is required." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acted as pilot in command under IFR after instrument currency lapsed more than 6 calendar months earlier; an instrument proficiency check is required."
+          }
+        }
+      }
+    },
+    "Acted as pilot in command under IFR with no instrument proficiency check or instrument rating on record before this flight." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acted as pilot in command under IFR with no instrument proficiency check or instrument rating on record before this flight."
+          }
+        }
+      }
+    },
+    "Acted as pilot in command under IFR without 6 approaches, holding and intercepting and tracking in the preceding 6 calendar months, or an instrument proficiency check." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acted as pilot in command under IFR without 6 approaches, holding and intercepting and tracking in the preceding 6 calendar months, or an instrument proficiency check."
+          }
+        }
+      }
+    },
+    "Acted as pilot in command with no flight review or practical test in the preceding 24 calendar months." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acted as pilot in command with no flight review or practical test in the preceding 24 calendar months."
+          }
+        }
+      }
+    },
+    "Carried passengers at night with %@ night takeoffs and %@ night full-stop landings in the preceding 90 days; 3 of each are required." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Carried passengers at night with %@ night takeoffs and %@ night full-stop landings in the preceding 90 days; 3 of each are required."
+          }
+        }
+      }
+    },
+    "Carried passengers in a tailwheel airplane with %@ takeoffs and %@ full-stop landings in tailwheel airplanes in the preceding 90 days; 3 of each are required." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Carried passengers in a tailwheel airplane with %@ takeoffs and %@ full-stop landings in tailwheel airplanes in the preceding 90 days; 3 of each are required."
+          }
+        }
+      }
+    },
+    "Carried passengers using night-vision goggles with %@ NVG takeoffs and %@ NVG landings in the preceding 2 calendar months and no NVG proficiency check; 3 of each, or a check, are required." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Carried passengers using night-vision goggles with %@ NVG takeoffs and %@ NVG landings in the preceding 2 calendar months and no NVG proficiency check; 3 of each, or a check, are required."
+          }
+        }
+      }
+    },
+    "Carried passengers with %@ takeoffs and %@ landings in the preceding 90 days in this category, class and type; 3 of each are required." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Carried passengers with %@ takeoffs and %@ landings in the preceding 90 days in this category, class and type; 3 of each are required."
+          }
+        }
+      }
+    },
+    "Days are counted in your home time zone. Legs logged as one flight are checked as one, so landings on an earlier leg don’t count for passengers on a later one." : {
+
+    },
+    "Flew an aircraft that requires a type rating with no proficiency check in the preceding 12 calendar months." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flew an aircraft that requires a type rating with no proficiency check in the preceding 12 calendar months."
+          }
+        }
+      }
+    },
+    "Flew an aircraft that requires a type rating with no proficiency check in this type in the preceding 24 calendar months." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flew an aircraft that requires a type rating with no proficiency check in this type in the preceding 24 calendar months."
+          }
+        }
+      }
+    },
+    "Flight Review" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flight Review"
+          }
+        }
+      }
+    },
+    "Flights before your first checkride aren’t checked, since a flight review is needed only once you hold a certificate." : {
+
+    },
+    "Gave %@ hours of flight instruction in the 24 hours ending when this flight started; the limit is 8." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gave %@ hours of flight instruction in the 24 hours ending when this flight started; the limit is 8."
+          }
+        }
+      }
+    },
+    "Gave flight instruction with %@ hours as pilot in command in this make and model; 5 are required." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gave flight instruction with %@ hours as pilot in command in this make and model; 5 are required."
+          }
+        }
+      }
+    },
+    "IFR Currency" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "IFR Currency"
+          }
+        }
+      }
+    },
+    "Instruction Limit" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instruction Limit"
+          }
+        }
+      }
+    },
+    "Instructor Time in Type" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instructor Time in Type"
+          }
+        }
+      }
+    },
+    "Night Passenger Currency" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Night Passenger Currency"
+          }
+        }
+      }
+    },
+    "NVG Currency" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NVG Currency"
+          }
+        }
+      }
+    },
+    "NVG Passenger Currency" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NVG Passenger Currency"
+          }
+        }
+      }
+    },
+    "Only flights with actual instrument time count as IFR, so IFR flights in visual conditions aren’t checked. Intercepting and tracking courses is assumed on flights with approaches unless a field records it." : {
+
+    },
+    "Only NVG takeoffs and landings are checked, not hovering or other NVG tasks." : {
+
+    },
+    "Passenger Currency" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passenger Currency"
+          }
+        }
+      }
+    },
+    "Proficiency Check" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Proficiency Check"
+          }
+        }
+      }
+    },
+    "Proficiency Check in Type" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Proficiency Check in Type"
+          }
+        }
+      }
+    },
+    "Served as second in command of an aircraft that requires a type rating with %@ takeoffs and %@ landings in this type in the preceding 90 days; 3 of each are required." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Served as second in command of an aircraft that requires a type rating with %@ takeoffs and %@ landings in this type in the preceding 90 days; 3 of each are required."
+          }
+        }
+      }
+    },
+    "SIC Currency" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SIC Currency"
+          }
+        }
+      }
+    },
+    "Used night-vision goggles with %@ NVG takeoffs and %@ NVG landings in the preceding 4 calendar months and no NVG proficiency check; 3 of each, or a check, are required." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Used night-vision goggles with %@ NVG takeoffs and %@ NVG landings in the preceding 4 calendar months and no NVG proficiency check; 3 of each, or a check, are required."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

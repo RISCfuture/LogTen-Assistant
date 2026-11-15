@@ -1,0 +1,130 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "“%@” isn’t a valid clock time." : {
+
+    },
+    "“%@” isn’t a valid date." : {
+
+    },
+    "%@ is limiting requests." : {
+
+    },
+    "%@ on part %@ of %@, after %@ attempts." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ on part %2$@ of %3$@, after %4$@ attempts."
+          }
+        }
+      }
+    },
+    "%@ rejected the credentials." : {
+
+    },
+    "A saved ADS-B file was modified." : {
+
+    },
+    "adsb.lol is limiting requests" : {
+
+    },
+    "Block time does not reconcile with exported clock times." : {
+
+    },
+    "Check the account in Settings." : {
+
+    },
+    "Check the internet connection, then retry." : {
+
+    },
+    "Connection lost" : {
+
+    },
+    "Couldn’t download the ADS-B archive." : {
+
+    },
+    "Couldn’t get data from %@." : {
+
+    },
+    "Couldn’t import the file." : {
+
+    },
+    "Engine running time does not reconcile with exported clock times." : {
+
+    },
+    "Expected a FlySto aircraft flight-list archive." : {
+
+    },
+    "Exported clock sequence exceeds 18 hours; dates need review." : {
+
+    },
+    "Found %lld releases for %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Found %1$lld releases for %2$@."
+          }
+        }
+      }
+    },
+    "No credentials for %@." : {
+
+    },
+    "Part %@ resumed at “%@” instead of byte %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Part %1$@ resumed at “%2$@” instead of byte %3$@."
+          }
+        }
+      }
+    },
+    "Refused to use an unexpected web address." : {
+
+    },
+    "Source flight is after the audit date." : {
+
+    },
+    "The ADS-B archive has no release for that day." : {
+
+    },
+    "The connection stalled" : {
+
+    },
+    "The file is empty." : {
+
+    },
+    "The FlySto link index does not match this CSV." : {
+
+    },
+    "The log has no %@." : {
+
+    },
+    "The log’s %@ “%@” isn’t a valid time." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "The log’s %1$@ “%2$@” isn’t a valid time."
+          }
+        }
+      }
+    },
+    "The server answered with HTTP status %@" : {
+
+    },
+    "The server answered with HTTP status %lld." : {
+
+    },
+    "Try again in %@ seconds." : {
+
+    },
+    "Unrecognized FlySto export." : {
+
+    }
+  },
+  "version" : "1.0"
+}

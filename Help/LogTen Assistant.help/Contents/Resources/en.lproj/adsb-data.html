@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Fetch ADS-B traces</title>
+  <meta name="AppleTitle" content="Fetch ADS-B traces">
+  <meta name="description" content="Download the adsb.lol daily archives and keep only your aircraft's traces.">
+  <meta name="keywords" content="adsb, ads-b, adsb.lol, traces, download, archive, icao address, opensky, odbl">
+  <meta name="robots" content="index, anchor">
+  <link rel="stylesheet" href="logten-assistant-help.css">
+</head>
+<body>
+<a name="adsb-data" id="adsb-data"></a>
+<figure class="topicIcon"><img src="../help-icon.png" alt="" width="30" height="30"></figure>
+<h1>Fetch ADS-B traces</h1>
+
+<p>ADS-B is the broadcast most aircraft send about their own position. The community site adsb.lol
+archives it every day. LogTen Assistant downloads the days you flew and keeps only your own aircraft’s
+traces.</p>
+
+<h2>Fetch traces</h2>
+
+<ol>
+  <li>Choose <strong>Audit</strong> &#9656; <strong>Fetch ADS-B Data…</strong>, or click
+    <strong>Fetch…</strong> on the Data Sources page.</li>
+  <li>Set <strong>From</strong> and <strong>To</strong>: up to a month at a time.</li>
+  <li>Under <strong>Aircraft Flown</strong>, choose the aircraft. An aircraft needs a known ICAO
+    address; the app works one out from a US N-number, or you can enter one in <strong>Logbook
+    Settings</strong> &#9656; <strong>Aircraft</strong>.</li>
+  <li>Click <strong>Check Size</strong>, then download.</li>
+</ol>
+
+<p>Each day’s archive is several gigabytes, so check the size before you start. The app streams the
+archive and keeps only the traces of the aircraft you chose; the rest is discarded as it goes. Click
+<strong>Stop</strong> at any time.</p>
+
+<h2>Where the traces go</h2>
+
+<p>Traces are stored in a cache. <strong>Settings</strong> &#9656; <strong>Data</strong> shows its
+location, with <strong>Show in Finder</strong>, and <strong>Keep up to</strong> caps its size.</p>
+
+<p class="note">The traces come from the adsb.lol archive, under the Open Database License
+(ODbL).</p>
+
+<div class="seealso">
+  <h2>See also</h2>
+  <ul>
+    <li><a href="data-sources.html">Where the evidence comes from</a></li>
+    <li><a href="app-settings.html">Change the app’s settings</a></li>
+  </ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Airports, distances and night landings weren’t checked against FAA data, because no NASR cycle has been downloaded." : {
+
+    },
+    "Approaches weren’t named, because no CIFP approach data is loaded." : {
+
+    },
+    "No ADS-B tracks have been downloaded." : {
+
+    },
+    "No FlySto records have been synced or imported." : {
+
+    },
+    "Restore the affected entries by hand in LogTen." : {
+
+    },
+    "Smart groups weren’t evaluated, because the snapshot isn’t available." : {
+
+    },
+    "The batch can’t be reverted." : {
+
+    },
+    "The batch isn’t applied, or another batch already reverted it." : {
+
+    }
+  },
+  "version" : "1.0"
+}

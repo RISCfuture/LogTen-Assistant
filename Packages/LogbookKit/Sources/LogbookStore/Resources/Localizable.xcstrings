@@ -1,0 +1,85 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "“%@” changed every time it was copied." : {
+
+    },
+    "“%@” couldn’t be opened: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "“%1$@” couldn’t be opened: %2$@"
+          }
+        }
+      }
+    },
+    "“%@” doesn’t contain a LogTen logbook." : {
+
+    },
+    "Choose a different field in Logbook Settings." : {
+
+    },
+    "Choose the LogTen group container or a “LogTenProData” folder inside it." : {
+
+    },
+    "Couldn’t evaluate the smart group." : {
+
+    },
+    "Couldn’t load LogTen’s data model." : {
+
+    },
+    "Couldn’t make a snapshot of the logbook." : {
+
+    },
+    "Couldn’t read the logbook." : {
+
+    },
+    "Install LogTen in the Applications folder." : {
+
+    },
+    "LogTen has no field named “%@”." : {
+
+    },
+    "No LogTen data model was found at “%@”." : {
+
+    },
+    "SQLite reported problems in the copy of “%@”: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "SQLite reported problems in the copy of “%1$@”: %2$@"
+          }
+        }
+      }
+    },
+    "The logbook uses data model “%@”, but the installed LogTen uses “%@”." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "The logbook uses data model “%1$@”, but the installed LogTen uses “%2$@”."
+          }
+        }
+      }
+    },
+    "The predicate “%@” is invalid: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "The predicate “%1$@” is invalid: %2$@"
+          }
+        }
+      }
+    },
+    "Update LogTen on this Mac to the version that last opened the logbook." : {
+
+    },
+    "Wait for LogTen to finish syncing, then try again." : {
+
+    }
+  },
+  "version" : "1.0"
+}

@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>What the app sends, and what it doesn’t</title>
+  <meta name="AppleTitle" content="What the app sends, and what it doesn’t">
+  <meta name="description" content="Your logbook stays on your Mac. Here is everything that leaves it: crash reports, update checks, and the downloads you start.">
+  <meta name="keywords" content="privacy, data, network, sentry, crash report, flysto, adsb, opensky, faa, nasr, airmen, logbook, upload">
+  <meta name="robots" content="index, anchor">
+  <link rel="stylesheet" href="logten-assistant-help.css">
+</head>
+<body>
+<a name="privacy-and-data" id="privacy-and-data"></a>
+<figure class="topicIcon"><img src="../help-icon.png" alt="" width="30" height="30"></figure>
+<h1>What the app sends, and what it doesn’t</h1>
+
+<p><strong>Your logbook never leaves your Mac.</strong> The app reads a copy of it and does its work
+locally. LogTen Assistant has no account, no analytics and no advertising.</p>
+
+<h2>What the app contacts</h2>
+
+<ul>
+  <li><strong>Crash and diagnostic reports.</strong> Release builds send crash reports to Sentry so
+    bugs can be found and fixed. They describe the app, not your logbook, and are redacted: no flight
+    data, registrations, names or file paths.</li>
+  <li><strong>Update checks.</strong> One request to GitHub’s public releases API, sending nothing
+    about you.</li>
+  <li><strong>FlySto.</strong> Only if you add an API token. Sync sends it to FlySto to fetch your
+    logs. Data logs you choose to upload go to FlySto; nothing else does.</li>
+  <li><strong>adsb.lol.</strong> When you fetch ADS-B data, the app downloads the public daily
+    archives. Only the archive requests leave your Mac; your aircraft are picked out after they arrive.</li>
+  <li><strong>OpenSky Network.</strong> Only if you add OpenSky credentials. They go to OpenSky’s
+    sign-in service to authorize requests to its API.</li>
+  <li><strong>FAA.</strong> NASR airport data and CIFP approach data are public downloads. The airmen
+    database is downloaded only when you use <strong>Look Up…</strong>, and searched on your Mac.</li>
+</ul>
+
+<h2>What stays on your Mac</h2>
+
+<ul>
+  <li>The logbook, its snapshots and backups.</li>
+  <li>Your review decisions, notes and the history of applied fixes, in a workspace folder the app keeps
+    for each logbook.</li>
+  <li>Credentials, which are kept in the Keychain.</li>
+</ul>
+
+<p>The full policy is on the <a href="https://riscfuture.github.io/LogTen-Assistant/privacy.html">website</a>.</p>
+
+<div class="seealso">
+  <h2>See also</h2>
+  <ul>
+    <li><a href="updates.html">Check for updates</a></li>
+    <li><a href="flysto.html">Sync flights from FlySto</a></li>
+  </ul>
+</div>
+
+</body>
+</html>

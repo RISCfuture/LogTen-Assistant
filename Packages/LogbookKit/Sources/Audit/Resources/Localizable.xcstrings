@@ -1,0 +1,1059 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@ %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@"
+          }
+        }
+      }
+    },
+    "%@ are logged, but the flight adds no total time." : {
+
+    },
+    "%@ are logged. The role times exceed total time %@ by %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ are logged. The role times exceed total time %2$@ by %3$@."
+          }
+        }
+      }
+    },
+    "%@ become no longer than the matching role time." : {
+
+    },
+    "%@ becomes %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ becomes %2$@."
+          }
+        }
+      }
+    },
+    "%@ can’t share the same minutes, so together they have to fit within total time %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ can’t share the same minutes, so together they have to fit within total time %2$@."
+          }
+        }
+      }
+    },
+    "%@ end below their start." : {
+
+    },
+    "%@ exceeds %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ exceeds %2$@."
+          }
+        }
+      }
+    },
+    "%@ exceeds total time." : {
+
+    },
+    "%@ is negative." : {
+
+    },
+    "%@ is part of %@, so it can’t be longer than the %@ time on the same flight." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ is part of %2$@, so it can’t be longer than the %3$@ time on the same flight."
+          }
+        }
+      }
+    },
+    "%@ is part of %@, so it can’t be longer." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ is part of %2$@, so it can’t be longer."
+          }
+        }
+      }
+    },
+    "%@ is set but %@ isn’t." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ is set but %2$@ isn’t."
+          }
+        }
+      }
+    },
+    "%@ Night" : {
+
+    },
+    "%@ precedes %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ precedes %2$@."
+          }
+        }
+      }
+    },
+    "14 CFR 61.1(b), Cross-country time (vi), uses displacement more than 50 NM from original departure for ATP experience, without requiring a landing there. Navigation, aircraft eligibility and personal credit require separate evidence." : {
+
+    },
+    "A 12-month instrument group is a recovery aid, not proof of current IFR privileges." : {
+
+    },
+    "A complete bounded track remains within 50 NM of departure; review the recorded ATP cross-country credit." : {
+
+    },
+    "A completed flight is expected to log its total time or its takeoffs and landings. Without them it adds nothing to totals and currency." : {
+
+    },
+    "A correlation override names an unknown flight." : {
+
+    },
+    "A flight can’t have been flown, with time to log, before its date and times have passed." : {
+
+    },
+    "A flight of %@ hours is longer than the %@ this aircraft is expected to fly in one entry, which usually means a date, a time or the total was mistyped." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "A flight of %1$@ hours is longer than the %2$@ this aircraft is expected to fly in one entry, which usually means a date, a time or the total was mistyped."
+          }
+        }
+      }
+    },
+    "A landing candidate does not prove a diversion or an erroneous combined entry. Remarks or recorded waypoints may document the intended itinerary." : {
+
+    },
+    "A person without a name can’t be recognized in the crew of the flights that list them." : {
+
+    },
+    "A place with neither a code nor a name can’t be recognized on the flights that use it." : {
+
+    },
+    "A simulator session logs total time but no simulator time." : {
+
+    },
+    "A takeoff or landing happens during a flight, so an entry that counts them is expected to log how long the flight lasted." : {
+
+    },
+    "Absent matches and track gaps do not establish that an approach or hold did not occur." : {
+
+    },
+    "Actual and simulated instrument time are separate periods, so together they can’t be longer than the flight." : {
+
+    },
+    "Actual Instrument" : {
+
+    },
+    "Add or correct the name in the crew, or correct the dual time if it was entered in error. If the entry is intentional, keep it as logged." : {
+
+    },
+    "Add the pilot in command to the crew, or correct the role time if you were in command. If the entry is intentional, keep it as logged." : {
+
+    },
+    "Add the role that covers the rest of the flight, such as PIC or dual received, or correct the total if it was entered in error. If the flight is intentionally logged without a role, keep it as logged." : {
+
+    },
+    "aircraft" : {
+
+    },
+    "Aircraft activity does not establish who flew, personal credit or passenger currency. Confirm attribution before changing any field." : {
+
+    },
+    "Aircraft evidence suggests an intermediate landing; review whether this entry intentionally combines legs." : {
+
+    },
+    "Aircraft flight for %@ has no clear logbook match; another pilot may have flown it." : {
+
+    },
+    "Aircraft tracking can resemble maneuvering or loiter; no exact hold count or correction is inferred." : {
+
+    },
+    "aircraft type" : {
+
+    },
+    "Aircraft types without a category, class or engine type." : {
+
+    },
+    "Aircraft types without an identifying type." : {
+
+    },
+    "Aircraft with neither an aircraft ID nor a secondary ID, or without a type." : {
+
+    },
+    "Aircraft, People & Places" : {
+
+    },
+    "Aircraft, places or aircraft types that share an identifier." : {
+
+    },
+    "Airport direct distance, ground track length and air distance measure different things. A difference alone does not establish an incorrect value; no numeric change is proposed." : {
+
+    },
+    "Also limited to the new total, as LogTen would do: %@." : {
+
+    },
+    "An aircraft needs an identifier to be told apart from others and a type to count its flights correctly." : {
+
+    },
+    "An engine meter only counts up, so its ending reading can’t be lower than its starting reading." : {
+
+    },
+    "Approach Count Missing" : {
+
+    },
+    "Approach detail comparison requires a unique logged approach and observed episode; unknown airport, runway or type remains unknown." : {
+
+    },
+    "Approach Without Instrument Time" : {
+
+    },
+    "Approaches lack recorded actual, simulated, or simulator instrument context." : {
+
+    },
+    "Approaches logged without actual, simulated or simulator instrument time." : {
+
+    },
+    "Available navigation evidence cannot independently corroborate all logged approaches or holds." : {
+
+    },
+    "Between nearby samples the position follows the sampled path. Bounds include a solar/movement margin; they are review evidence, not an Air Almanac certification." : {
+
+    },
+    "Block Time Disagrees with Total" : {
+
+    },
+    "Category, class and engine type decide which totals and currency rules the aircraft’s flights count toward." : {
+
+    },
+    "Check the date and clock time of each. If two times were entered in each other’s boxes, swap them." : {
+
+    },
+    "Check the readings against the aircraft’s meter. If they were entered in the wrong boxes, swap them." : {
+
+    },
+    "Check the times and the total. If you logged only part of the flight, such as time as a safety pilot, keep it as logged." : {
+
+    },
+    "Choose a simulator aircraft for the entry, or move the time to the roles you flew in the aircraft. If the entry is intentional, keep it as logged." : {
+
+    },
+    "Choose the aircraft flown. If it isn’t in the logbook yet, add it first." : {
+
+    },
+    "Choose the logbook owner in Logbook Settings." : {
+
+    },
+    "Civil-twilight bounds use observed positions and geometric solar-center elevation strictly below −6 degrees, without atmospheric refraction; gaps, missing positions and twilight transitions remain unknown." : {
+
+    },
+    "Clear %@" : {
+
+    },
+    "Clear a role entered in error when a correction is offered. If both roles are intentional, correct their separate durations or an understated total time. Check Crew as well if its listed position isn’t the one you meant to record." : {
+
+    },
+    "Cleared: %@. %@ stays at %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Cleared: %1$@. %2$@ stays at %3$@."
+          }
+        }
+      }
+    },
+    "Compare the two. If one is a copy, delete it in LogTen, keeping the entry that has signatures or the more complete details. If both flights are real, keep them as logged." : {
+
+    },
+    "Confirm which value is wrong before changing credit. An exact replacement isn’t inferred." : {
+
+    },
+    "Correct the crew listing if you flew the other seat, or correct the role time if the listing is right. If the entry is intentional, keep it as logged." : {
+
+    },
+    "Correct the date or times if they were mistyped. If this is a planned flight, clear its total time until it has been flown." : {
+
+    },
+    "Correct the instrument times, or the total time if it is understated." : {
+
+    },
+    "Correct the night role time or the role time it belongs to. If night time itself is understated, correct that instead." : {
+
+    },
+    "Correct the total or the times. If one entry really holds this long a flight, keep it as logged." : {
+
+    },
+    "Counts Exceed Totals" : {
+
+    },
+    "Crew & Roles" : {
+
+    },
+    "Crew Seat" : {
+
+    },
+    "Cross-Country" : {
+
+    },
+    "Cross-Country Night" : {
+
+    },
+    "Custom Time Exceeds Total" : {
+
+    },
+    "Custom times chosen in the audit options that exceed total time." : {
+
+    },
+    "Dates" : {
+
+    },
+    "Day Landings" : {
+
+    },
+    "Day Takeoffs" : {
+
+    },
+    "Day-offset or swapped-time alternatives fit the logged duration. They are possibilities, not confirmed corrections; check recordings and adjacent flights." : {
+
+    },
+    "Day/night counts use civil twilight; the mapped night full-stop field uses one hour after sunset to one hour before sunrise at touchdown." : {
+
+    },
+    "Distance" : {
+
+    },
+    "Dual Given" : {
+
+    },
+    "Dual given is logged, but no student is named." : {
+
+    },
+    "Dual given is logged, but you’re named as the student." : {
+
+    },
+    "Dual given or received with a missing or conflicting instructor or student, where you usually name them." : {
+
+    },
+    "Dual Received" : {
+
+    },
+    "Dual received is logged, but no instructor is named." : {
+
+    },
+    "Dual received is logged, but you’re named as the instructor." : {
+
+    },
+    "Dual Received Night" : {
+
+    },
+    "Duplicate Entries" : {
+
+    },
+    "Duplicate Entry" : {
+
+    },
+    "Duplicate Record" : {
+
+    },
+    "Each configured field is checked on its own; overlapping categories aren’t added together." : {
+
+    },
+    "Enter an airport code or a name, or remove the place if nothing uses it. If the record is intentional, keep it as logged." : {
+
+    },
+    "Enter the flight’s actual duration and review any role times against it. Where two fields describe the same period, that period belongs only once in total time." : {
+
+    },
+    "Enter the flight’s total time, then review the role times against it. Where two roles describe the same period, that period belongs only once in the total." : {
+
+    },
+    "Enter the flight’s total time. If the counts belong to a different entry, move them there." : {
+
+    },
+    "Enter the person’s name, or remove the record if nothing uses it. If the record is intentional, keep it as logged." : {
+
+    },
+    "Enter the session’s duration as simulator time, or as SFI time if you instructed. If the entry is intentional, keep it as logged." : {
+
+    },
+    "Enter the type designator. If the type is intentionally unnamed, keep it as logged." : {
+
+    },
+    "Entries dated or timed in the future that already log total time." : {
+
+    },
+    "Entries identical to one another." : {
+
+    },
+    "Entries longer than is plausible for their aircraft, such as over 24 hours." : {
+
+    },
+    "Entries that log time are expected to name the aircraft, so reports can total time by aircraft, type, category and class." : {
+
+    },
+    "Entries that log time without a From or a To place." : {
+
+    },
+    "Entries that log time without an aircraft type." : {
+
+    },
+    "Entries that log time without an aircraft." : {
+
+    },
+    "Entries that look like one flight logged twice." : {
+
+    },
+    "Entries that refer to an aircraft the logbook doesn’t contain." : {
+
+    },
+    "Entries whose out-to-in times overlap." : {
+
+    },
+    "Estimated %@ time differs from the logbook." : {
+
+    },
+    "Even the observed-position lower bound exceeds the logged night credit. Missing positions remain unknown; this is not just a six-minute rounding difference." : {
+
+    },
+    "Event comparisons require continuous observations, complete segments and agreement with the preferred source’s totals. An unclassified landing is not treated as a non-full-stop landing." : {
+
+    },
+    "Fill in the missing details on the aircraft type. If the type is intentionally unclassified, keep it as logged." : {
+
+    },
+    "Fill in the missing details on the aircraft. If the record is intentionally sparse, keep it as logged." : {
+
+    },
+    "FlySto observation differs from the logbook." : {
+
+    },
+    "From and To are both empty." : {
+
+    },
+    "From and To are expected on every flight so its departure and arrival appear in the logbook and reports. Route holds the airports in between. A flight that returns to its departure still needs that place in To." : {
+
+    },
+    "From becomes “%@”." : {
+
+    },
+    "From is logged, but To is empty." : {
+
+    },
+    "Full Stops" : {
+
+    },
+    "Future Date" : {
+
+    },
+    "Give the aircraft its type in the Aircraft list." : {
+
+    },
+    "Ground" : {
+
+    },
+    "Hobbs" : {
+
+    },
+    "Hobbs and Tach Order" : {
+
+    },
+    "Hobbs In" : {
+
+    },
+    "Hobbs or tach end readings lower than their start readings." : {
+
+    },
+    "Hobbs Out" : {
+
+    },
+    "Holds" : {
+
+    },
+    "If you returned to the departure place, copy it across. Otherwise enter the actual place." : {
+
+    },
+    "IFR or actual instrument time is recorded in an aircraft marked not IFR-capable." : {
+
+    },
+    "Implausible Duration" : {
+
+    },
+    "In" : {
+
+    },
+    "Incomplete Aircraft" : {
+
+    },
+    "Incomplete Person" : {
+
+    },
+    "Incomplete Place" : {
+
+    },
+    "Independently matched aircraft evidence places a flight boundary at a different airport; review the entry route." : {
+
+    },
+    "Instructor and Student Names" : {
+
+    },
+    "Instructor/student flight: missing personal night credit and event counts are excluded; upper-bound violations remain reviewable." : {
+
+    },
+    "Instrument Time in a VFR Aircraft" : {
+
+    },
+    "Instrument time in an aircraft marked not IFR-capable." : {
+
+    },
+    "Instrument times together exceed total time." : {
+
+    },
+    "Landings & Approaches" : {
+
+    },
+    "Landings Without Time" : {
+
+    },
+    "Limit %@ to %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Limit %1$@ to %2$@"
+          }
+        }
+      }
+    },
+    "Limit Night Role Times" : {
+
+    },
+    "Logged distance differs from the available direct and FlySto distance measures; review the intended distance convention." : {
+
+    },
+    "Logged instrument time supplies context, not proof that the maneuver occurred in IMC or qualified for credit." : {
+
+    },
+    "Logged night credit differs from the bounded aircraft observations; review pilot attribution and field semantics." : {
+
+    },
+    "Lower the time to fit, or correct %@ if it is understated." : {
+
+    },
+    "Matched published approach fixes support approach candidates; verify logged detail and pilot credit." : {
+
+    },
+    "Merge the records in LogTen so every flight points to one. If they are different things that happen to share an identifier, keep them as logged." : {
+
+    },
+    "Missing Aircraft" : {
+
+    },
+    "Missing Aircraft Type" : {
+
+    },
+    "Missing From or To" : {
+
+    },
+    "Missing Full Stops" : {
+
+    },
+    "Missing Information" : {
+
+    },
+    "Missing Total Time" : {
+
+    },
+    "Multiple or weak matches require review." : {
+
+    },
+    "Named approach has no recorded quantity; no currency credit was inferred." : {
+
+    },
+    "Named approaches with no count." : {
+
+    },
+    "Naming the pilot in command records who held command while you flew in a supporting role. You usually name one on similar flights, so leaving it out is worth a look." : {
+
+    },
+    "NASR aliases and runway geometry use the %@ reference cycle. Historical identifiers and layouts, and combined entries, require review." : {
+
+    },
+    "Negative Value" : {
+
+    },
+    "Night" : {
+
+    },
+    "Night full stops above total full stops or night landings." : {
+
+    },
+    "Night full stops are recorded but total full stops are missing." : {
+
+    },
+    "Night Full Stops Exceed Landings" : {
+
+    },
+    "Night full stops logged without total full stops." : {
+
+    },
+    "Night Landings" : {
+
+    },
+    "Night landings alone don’t establish the full-stop requirement." : {
+
+    },
+    "Night role times are parts of the flight’s night time of %@. Roles that can’t share a period, such as PIC and SIC, can’t together be longer than it." : {
+
+    },
+    "Night role times that don’t fit within night time or their role’s time." : {
+
+    },
+    "Night Seat Time" : {
+
+    },
+    "Night seat times need review." : {
+
+    },
+    "Night Takeoffs" : {
+
+    },
+    "Night Vision Goggle" : {
+
+    },
+    "Night, instrument, role or instruction time above total time, or cross-country night above cross-country or night time." : {
+
+    },
+    "No IMC, hood use, pilot identity, completion or personal credit is inferred from navigation or aircraft movement." : {
+
+    },
+    "No role time is logged, so none of the %@ of total time has a role." : {
+
+    },
+    "Observed %@ count differs from pilot logbook; attribution may explain it." : {
+
+    },
+    "Off" : {
+
+    },
+    "On" : {
+
+    },
+    "Out" : {
+
+    },
+    "Out-to-in time that differs from total time." : {
+
+    },
+    "Out, off, on and in are the four moments of a flight in order, so none can be earlier than the one before it." : {
+
+    },
+    "Out, off, on and in times entered out of order." : {
+
+    },
+    "Overlapping Entries" : {
+
+    },
+    "P1 u/s" : {
+
+    },
+    "P1 u/s Night" : {
+
+    },
+    "Passenger recency uses 90 days; this group uses another date increment." : {
+
+    },
+    "Passing the published fixes of an approach shows where the aircraft flew; it does not establish IMC, execution, completion or pilot credit." : {
+
+    },
+    "Past entries with neither total time nor takeoffs and landings." : {
+
+    },
+    "People with neither a name nor an ID." : {
+
+    },
+    "PIC" : {
+
+    },
+    "PIC and SIC aren’t normally expected on the same flight. If one entry holds separate periods in those roles, their durations still have to fit within total time." : {
+
+    },
+    "PIC Night" : {
+
+    },
+    "PIC Not Named" : {
+
+    },
+    "PIC or SIC time that disagrees with where you’re listed in the crew." : {
+
+    },
+    "PIC time is logged, but you’re listed as second in command." : {
+
+    },
+    "place" : {
+
+    },
+    "Places with neither a code nor a name." : {
+
+    },
+    "Possible Duplicate" : {
+
+    },
+    "Records that share an identifier split one thing’s flights and totals across several entries." : {
+
+    },
+    "Remove the instructor if the flight was solo, or correct the solo time if the instructor flew with you. If the entry is intentional, keep it as logged." : {
+
+    },
+    "Repeated FlySto records disagree; resolve the source before choosing a correction." : {
+
+    },
+    "Repeated reciprocal straight legs, spatial recurrence, altitude stability and continuous coverage support a racetrack candidate; they do not prove an instrument hold." : {
+
+    },
+    "Repeated reciprocal track legs form hold candidates in logged instrument context; confirm the procedure and pilot credit." : {
+
+    },
+    "Review %@: %@ minutes versus total %@ minutes." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Review %1$@: %2$@ minutes versus total %3$@ minutes."
+          }
+        }
+      }
+    },
+    "Review solar-window evidence and pilot attribution before considering a correction." : {
+
+    },
+    "Review the annual qualifying check and the 24-month type-specific check separately, including credited due months." : {
+
+    },
+    "Role times describe parts of a flight’s total time, so a flight that logs them needs a total to measure them against." : {
+
+    },
+    "Role times that don’t fit within total time." : {
+
+    },
+    "Seat Time" : {
+
+    },
+    "Set From to Match To" : {
+
+    },
+    "Set To to Match From" : {
+
+    },
+    "Several %@ records use %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Several %1$@ records use %2$@."
+          }
+        }
+      }
+    },
+    "SIC" : {
+
+    },
+    "SIC Night" : {
+
+    },
+    "SIC or P1 u/s time is logged, but no pilot in command is named." : {
+
+    },
+    "SIC or P1 u/s time with no PIC named, where you usually name one." : {
+
+    },
+    "SIC time is logged, but you’re listed as pilot in command." : {
+
+    },
+    "Signed or locked entry: leave unchanged and preserve signatures." : {
+
+    },
+    "Simulated Instrument" : {
+
+    },
+    "Simulator" : {
+
+    },
+    "Simulator and SFI time belongs to sessions in a simulator or training device. In a real aircraft it is counted in the wrong totals." : {
+
+    },
+    "Simulator or SFI time in an aircraft type that isn’t a simulator." : {
+
+    },
+    "Simulator Session Time" : {
+
+    },
+    "Simulator sessions with total time but no simulator or SFI time." : {
+
+    },
+    "Simulator Time in an Aircraft" : {
+
+    },
+    "Simulator time is logged in an aircraft type that isn’t a simulator." : {
+
+    },
+    "Solo" : {
+
+    },
+    "Solo time is logged, but an instructor is named." : {
+
+    },
+    "Solo time means no one else was aboard to give instruction, so an instructor named on the same entry contradicts it." : {
+
+    },
+    "Solo time on an entry that names an instructor." : {
+
+    },
+    "Solo with Instructor" : {
+
+    },
+    "Swap %@ and %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Swap %1$@ and %2$@"
+          }
+        }
+      }
+    },
+    "Swap the Readings" : {
+
+    },
+    "Tach" : {
+
+    },
+    "Tach In" : {
+
+    },
+    "Tach Out" : {
+
+    },
+    "Takeoff and landing counts above the totals that contain them." : {
+
+    },
+    "Takeoffs or landings are logged without total time." : {
+
+    },
+    "Takeoffs or landings on an entry with no total time." : {
+
+    },
+    "The %@ and %@ times trade places." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "The %1$@ and %2$@ times trade places."
+          }
+        }
+      }
+    },
+    "The aircraft has no aircraft type." : {
+
+    },
+    "The aircraft is missing its aircraft ID or its type." : {
+
+    },
+    "The aircraft met the ATP cross-country geographic threshold while the ATP field is zero; review personal eligibility and credit." : {
+
+    },
+    "The aircraft type has no type designator." : {
+
+    },
+    "The aircraft type is missing a category, class or engine type." : {
+
+    },
+    "The discrepancy is close to a whole number of hours. A time-zone entry error is possible, but which time is wrong isn’t established." : {
+
+    },
+    "The entry date differs from observed departure dates in both UTC and the departure airport timezone; review the date convention." : {
+
+    },
+    "The flight has a time in the future." : {
+
+    },
+    "The flight has no aircraft." : {
+
+    },
+    "The flight is dated in the future." : {
+
+    },
+    "The flight is longer than the configured review threshold." : {
+
+    },
+    "The flight logs no total time." : {
+
+    },
+    "The flight refers to an aircraft that isn’t in the logbook." : {
+
+    },
+    "The instruction-activity policy needs an identifiable logbook owner." : {
+
+    },
+    "The instructor and student names say who gave and who received the instruction in dual time. Entries that omit them, or name you on the wrong side, leave the record of the training incomplete." : {
+
+    },
+    "The logbook entry has no block times, but the aircraft was observed flying." : {
+
+    },
+    "The logbook owner is listed as Instructor or another person is listed as Student; the student may perform events or receive flight time that the owner does not log as personal credit." : {
+
+    },
+    "The logged flight intervals overlap; verify pilot attribution." : {
+
+    },
+    "The logged night credit exceeds the actual-position upper bound. Compare the endpoint model, interval and any partial personal credit before editing." : {
+
+    },
+    "The out-to-in interval differs from the logged total time." : {
+
+    },
+    "The person has no name or ID." : {
+
+    },
+    "The place has no code and no name." : {
+
+    },
+    "The remarks describe partial-flight credit. The aircraft’s elapsed time need not equal the time this pilot logged; confirm attribution before changing either." : {
+
+    },
+    "The six-minute endpoint model can explain the logged value. The actual route and speed history produce a different night estimate. Review whether to use the more detailed aircraft-position calculation." : {
+
+    },
+    "The start and end readings of %@ trade places." : {
+
+    },
+    "The time between out and in is %@, but total time is %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "The time between out and in is %1$@, but total time is %2$@."
+          }
+        }
+      }
+    },
+    "The time you logged as pilot in command or second in command should match the seat you’re listed in under crew. When they differ, reports built from either one disagree with the other." : {
+
+    },
+    "The type designator is how the aircraft type is recognized in reports and type-rating checks." : {
+
+    },
+    "The upper bound includes travel possible between samples and a 3 NM position margin. Incomplete or widely spaced samples cannot disprove the threshold." : {
+
+    },
+    "These entries match on date, aircraft, places, times and every other logged value, so one is almost certainly a copy of the other." : {
+
+    },
+    "These entries may be duplicates. Review ownership, times, approaches and signatures before merging them." : {
+
+    },
+    "These entries share a date, aircraft and places, and their times or remarks are close enough that they may describe one flight." : {
+
+    },
+    "This approach and hold group doesn’t test intercepting and tracking; check the complete currency hierarchy." : {
+
+    },
+    "This flight-review group may omit qualifying practical tests, proficiency checks or WINGS phases." : {
+
+    },
+    "This overlap may be a consequence of a date error. Review the linked duration finding before changing either flight." : {
+
+    },
+    "Time Exceeds Total" : {
+
+    },
+    "Time in a simulator or training device is counted under simulator time. Without it, the session adds to totals as if it were flown in an aircraft." : {
+
+    },
+    "Time in an aircraft with no type can’t be totaled by type, category or class, which currency and experience requirements depend on." : {
+
+    },
+    "Times" : {
+
+    },
+    "Times and counts below zero." : {
+
+    },
+    "Times Out of Order" : {
+
+    },
+    "To becomes “%@”." : {
+
+    },
+    "To is logged, but From is empty." : {
+
+    },
+    "Total Landings" : {
+
+    },
+    "Total Takeoffs" : {
+
+    },
+    "Total Time" : {
+
+    },
+    "Total time also contains whole days; review every credited time after confirming the dates." : {
+
+    },
+    "Total time becomes %@, the time from out to in." : {
+
+    },
+    "Total time is missing." : {
+
+    },
+    "Total time is not fully accounted for by role." : {
+
+    },
+    "Total time of %@ includes %@ that no role time covers, so that part of the flight has no role." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Total time of %1$@ includes %2$@ that no role time covers, so that part of the flight has no role."
+          }
+        }
+      }
+    },
+    "Unclassified Aircraft Type" : {
+
+    },
+    "Unidentified Aircraft Type" : {
+
+    },
+    "Unknown Aircraft" : {
+
+    },
+    "Use FlySto’s Time" : {
+
+    },
+    "Use the Out-to-In Time" : {
+
+    },
+    "UTC date and local logbook date need not agree. This comparison does not authorize a date or timezone edit." : {
+
+    }
+  },
+  "version" : "1.0"
+}
