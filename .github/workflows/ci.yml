@@ -26,11 +26,17 @@ env:
     CODE_SIGN_ENTITLEMENTS=
 
 jobs:
+  route:
+    uses: RISCfuture/ci-workflows/.github/workflows/minerva-route.yml@1.1.0
+    permissions:
+      contents: read
+
   # The logic lives in the LogbookKit package, whose tests need no app host. Those that build a
   # synthetic LogTen store skip themselves when LogTen isn't installed, as it isn't on a runner.
   package:
     name: LogbookKit Tests
-    runs-on: xcode-27
+    needs: route
+    runs-on: ${{ fromJSON(needs.route.outputs.macos-27) }}
     timeout-minutes: 45
     steps:
       - uses: maxim-lobanov/setup-xcode@ed7a3b1fda3918c0306d1b724322adc0b8cc0a90  # v1.7.0
@@ -69,7 +75,8 @@ jobs:
 
   build:
     name: Build
-    runs-on: xcode-27
+    needs: route
+    runs-on: ${{ fromJSON(needs.route.outputs.xcode-27) }}
     timeout-minutes: 45
     steps:
       - uses: maxim-lobanov/setup-xcode@ed7a3b1fda3918c0306d1b724322adc0b8cc0a90  # v1.7.0
@@ -113,7 +120,8 @@ jobs:
 
   ui:
     name: UI Tests
-    runs-on: xcode-27
+    needs: route
+    runs-on: ${{ fromJSON(needs.route.outputs.macos-27) }}
     timeout-minutes: 90
     steps:
       - uses: maxim-lobanov/setup-xcode@ed7a3b1fda3918c0306d1b724322adc0b8cc0a90  # v1.7.0
